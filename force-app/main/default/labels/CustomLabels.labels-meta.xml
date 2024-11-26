@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Cactus_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cactus Email</shortDescription>
+        <value>MFSalesforce@maximus.com</value>
+    </labels>
+    <labels>
+        <fullName>Community_Start_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Community Start URL</shortDescription>
+        <value>/s</value>
+    </labels>
+    <labels>
+        <fullName>FERP_Check_Case_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FERP Check Case Status</shortDescription>
+        <value>https://maximusato--ferpdev.sandbox.my.site.com/ferp/s/checkcase</value>
+    </labels>
+</CustomLabels>

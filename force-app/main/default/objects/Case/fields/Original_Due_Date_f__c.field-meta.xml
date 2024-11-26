@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Due_Date_f__c</fullName>
+    <formula>IF(Program_Priority_Unit__c=&apos;Per Hour&apos;, Clock_Start_Date__c + ((Number_of_Days__c * 60))/1440, Clock_Start_Date__c + Number_of_Days__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Original Due Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

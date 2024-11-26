@@ -1,0 +1,28 @@
+.THIS .slds-box{
+    background:#cfeffc;
+    border:1px solid #cfeffc;
+}
+.THIS .slds-truncate{
+    /* color: #836f17;
+    font-weight: bold; */
+    font-size:16px;
+    color: #000000;
+}
+.THIS .slds-form-element__label{
+    color: #333;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.THIS .slds-button_inverse{
+    color:black;
+}
+.THIS .iconcolor svg{
+    fill: red;
+}
+.THIS lightning-primitive-header-actions {
+    display: none;
+}
+.THIS .slds-radio_faux{
+    color: #333;
+
+}

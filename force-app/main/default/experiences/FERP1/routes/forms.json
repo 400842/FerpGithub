@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d9e3e279-acea-4759-b612-cd37aa0fcfee",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "forms__c",
+  "id" : "e6d35732-3515-44ae-ad58-e20883e4e177",
+  "label" : "Forms",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-forms",
+  "type" : "route",
+  "urlPrefix" : "forms"
+}

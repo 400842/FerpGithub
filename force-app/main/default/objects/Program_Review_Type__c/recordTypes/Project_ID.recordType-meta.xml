@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_ID</fullName>
+    <active>true</active>
+    <label>Project ID</label>
+    <picklistValues>
+        <picklist>Template_Name__c</picklist>
+        <values>
+            <fullName>Acknowledgement Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismissal Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Appeal Category</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appeal Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Phase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Type</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

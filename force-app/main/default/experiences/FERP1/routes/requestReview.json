@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "5b364831-40a1-416d-9449-36d448c51fcb",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "requestreview__c",
+  "id" : "b7e27a02-9e5f-4566-81b7-e09fc07ff85c",
+  "label" : "RequestReview",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-requestreview",
+  "type" : "route",
+  "urlPrefix" : "requestreview"
+}

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_Type__c</fullName>
+    <label>Provider Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acute Hospital</fullName>
+                <default>false</default>
+                <label>Acute Hospital</label>
+            </value>
+            <value>
+                <fullName>Ambulance</fullName>
+                <default>false</default>
+                <label>Ambulance</label>
+            </value>
+            <value>
+                <fullName>Anesthesiology</fullName>
+                <default>false</default>
+                <label>Anesthesiology</label>
+            </value>
+            <value>
+                <fullName>Chiropractic</fullName>
+                <default>false</default>
+                <label>Chiropractic</label>
+            </value>
+            <value>
+                <fullName>ER-Freestanding emergent/urgent care center</fullName>
+                <default>false</default>
+                <label>ER-Freestanding emergent/urgent care center</label>
+            </value>
+            <value>
+                <fullName>ER-Hospital</fullName>
+                <default>false</default>
+                <label>ER-Hospital</label>
+            </value>
+            <value>
+                <fullName>Home Health Agency</fullName>
+                <default>false</default>
+                <label>Home Health Agency</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Acute inpatient medical/surgical</fullName>
+                <default>false</default>
+                <label>Inpatient-Acute inpatient medical/surgical</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Military treatment facility and VA Hospital</fullName>
+                <default>false</default>
+                <label>Inpatient-Military treatment facility and VA Hospital</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Oncology</fullName>
+                <default>false</default>
+                <label>Inpatient-Oncology</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Psychiatric</fullName>
+                <default>false</default>
+                <label>Inpatient-Psychiatric</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Rehabilitation</fullName>
+                <default>false</default>
+                <label>Inpatient-Rehabilitation</label>
+            </value>
+            <value>
+                <fullName>Inpatient-Substance abuse treatment</fullName>
+                <default>false</default>
+                <label>Inpatient-Substance abuse treatment</label>
+            </value>
+            <value>
+                <fullName>Laboratory-Independent Laboratory or Diagnostic Testing Facility</fullName>
+                <default>false</default>
+                <label>Laboratory-Independent Laboratory or Diagnostic Testing Facility</label>
+            </value>
+            <value>
+                <fullName>Nursing-Adult Living Facility</fullName>
+                <default>false</default>
+                <label>Nursing-Adult Living Facility</label>
+            </value>
+            <value>
+                <fullName>Nursing-Custodial Care Facility</fullName>
+                <default>false</default>
+                <label>Nursing-Custodial Care Facility</label>
+            </value>
+            <value>
+                <fullName>Nursing-Intermediate Care Facility</fullName>
+                <default>false</default>
+                <label>Nursing-Intermediate Care Facility</label>
+            </value>
+            <value>
+                <fullName>Nursing-SNF</fullName>
+                <default>false</default>
+                <label>Nursing-SNF</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Inpatient Facility</fullName>
+                <default>false</default>
+                <label>Other Inpatient Facility</label>
+            </value>
+            <value>
+                <fullName>Outpatient Medical Center</fullName>
+                <default>false</default>
+                <label>Outpatient Medical Center</label>
+            </value>
+            <value>
+                <fullName>Outpatient-Ambulatory surgical center</fullName>
+                <default>false</default>
+                <label>Outpatient-Ambulatory surgical center</label>
+            </value>
+            <value>
+                <fullName>Outpatient-Freestanding Clinic</fullName>
+                <default>false</default>
+                <label>Outpatient-Freestanding Clinic</label>
+            </value>
+            <value>
+                <fullName>Outpatient-Freestanding emergent/urgent care center</fullName>
+                <default>false</default>
+                <label>Outpatient-Freestanding emergent/urgent care center</label>
+            </value>
+            <value>
+                <fullName>Outpatient-Hospital Outpatient department</fullName>
+                <default>false</default>
+                <label>Outpatient-Hospital Outpatient department</label>
+            </value>
+            <value>
+                <fullName>Outpatient-Hospital emergency room</fullName>
+                <default>false</default>
+                <label>Outpatient-Hospital emergency room</label>
+            </value>
+            <value>
+                <fullName>Pathology</fullName>
+                <default>false</default>
+                <label>Pathology</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Practitioner</fullName>
+                <default>false</default>
+                <label>Practitioner</label>
+            </value>
+            <value>
+                <fullName>Professional Corp/Proprietorship</fullName>
+                <default>false</default>
+                <label>Professional Corp/Proprietorship</label>
+            </value>
+            <value>
+                <fullName>Psychiatric/Mental Health</fullName>
+                <default>false</default>
+                <label>Psychiatric/Mental Health</label>
+            </value>
+            <value>
+                <fullName>Radiology</fullName>
+                <default>false</default>
+                <label>Radiology</label>
+            </value>
+            <value>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+                <label>Transportation</label>
+            </value>
+            <value>
+                <fullName>Transportation-Ambulance</fullName>
+                <default>false</default>
+                <label>Transportation-Ambulance</label>
+            </value>
+            <value>
+                <fullName>Transportation-Ambulance air or water</fullName>
+                <default>false</default>
+                <label>Transportation-Ambulance air or water</label>
+            </value>
+            <value>
+                <fullName>Transportation-Ambulate or non-emergency ambulance</fullName>
+                <default>false</default>
+                <label>Transportation-Ambulate or non-emergency ambulance</label>
+            </value>
+            <value>
+                <fullName>Transportation-Taxi</fullName>
+                <default>false</default>
+                <label>Transportation-Taxi</label>
+            </value>
+            <value>
+                <fullName>Vendor-DME</fullName>
+                <default>false</default>
+                <label>Vendor-DME</label>
+            </value>
+            <value>
+                <fullName>Vendor-Home health agency</fullName>
+                <default>false</default>
+                <label>Vendor-Home health agency</label>
+            </value>
+            <value>
+                <fullName>Vendor-Hospice</fullName>
+                <default>false</default>
+                <label>Vendor-Hospice</label>
+            </value>
+            <value>
+                <fullName>Vendor-Medical Supplier</fullName>
+                <default>false</default>
+                <label>Vendor-Medical Supplier</label>
+            </value>
+            <value>
+                <fullName>Vendor-Pharmacy</fullName>
+                <default>false</default>
+                <label>Vendor-Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Vendor-Portable x-ray supplier</fullName>
+                <default>false</default>
+                <label>Vendor-Portable x-ray supplier</label>
+            </value>
+            <value>
+                <fullName>Vendor-Prosthetic Devices</fullName>
+                <default>false</default>
+                <label>Vendor-Prosthetic Devices</label>
+            </value>
+            <value>
+                <fullName>Vendor-Vision</fullName>
+                <default>false</default>
+                <label>Vendor-Vision</label>
+            </value>
+            <value>
+                <fullName>Vendor/Supplier</fullName>
+                <default>false</default>
+                <label>Vendor/Supplier</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

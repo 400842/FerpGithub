@@ -1,0 +1,54 @@
+{
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "c098a0d6-c816-442c-9692-b522c498e66c",
+  "label" : "External Reviews",
+  "regions" : [ {
+    "id" : "b18d070d-27fa-4737-924b-fd7f03de1991",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FerpExternalReviews",
+      "id" : "450df643-43c5-4c6f-b532-7ff63869fca3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "979bdd72-9e0c-4358-82b3-7fd1f2b2e780",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FERPFooter",
+      "id" : "bd5a511d-d8a4-4c50-9f55-0922f76d49a3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1c308ee6-6f8b-4f6c-9b07-0eab72b4d241",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "External Reviews"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5056b1a0-3fba-4958-8cb4-349a790732f1",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "295d7561-b88b-41aa-bb04-d58b82f32276",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "l2fAEBy1kBFQ9txx3EY48SYVfgJD8u",
+  "type" : "view",
+  "viewType" : "custom-external-reviews"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reviewer_Hours_should_be_positive</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(OR(ISPICKVAL(Review_Fee__r.Unit__c, &apos;Hourly&apos;),ISPICKVAL(Unit__c, &apos;Hourly&apos;)), OR(Reviewer_Number_of_Hours__c &lt;= 0,ISBLANK(Reviewer_Number_of_Hours__c )) , FALSE)</errorConditionFormula>
+    <errorDisplayField>Reviewer_Number_of_Hours__c</errorDisplayField>
+    <errorMessage>Please provide number of hours that is greater than 0.</errorMessage>
+</ValidationRule>

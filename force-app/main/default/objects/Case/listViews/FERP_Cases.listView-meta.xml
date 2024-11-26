@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FERP_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Number_f__c</columns>
+    <columns>Review_Type__c</columns>
+    <columns>Priority_Type__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>Received_Date__c</columns>
+    <columns>Clock_Start_Date__c</columns>
+    <columns>Original_Due_Date__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Current_Worker__c</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Program_Code__c</field>
+        <operation>equals</operation>
+        <value>FP</value>
+    </filters>
+    <label>All FERP Cases</label>
+</ListView>

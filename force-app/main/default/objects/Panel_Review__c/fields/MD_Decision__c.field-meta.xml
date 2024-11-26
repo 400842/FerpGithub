@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MD_Decision__c</fullName>
+    <label>MD Decision</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I find the requested services were/are NOT medically necessary</fullName>
+                <default>false</default>
+                <label>I find the requested services were/are NOT medically necessary</label>
+            </value>
+            <value>
+                <fullName>I find the requested services were/are medically necessary</fullName>
+                <default>false</default>
+                <label>I find the requested services were/are medically necessary</label>
+            </value>
+            <value>
+                <fullName>I find SOME of the requested services were/are medically necessary</fullName>
+                <default>false</default>
+                <label>I find SOME of the requested services were/are medically necessary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Type__c</fullName>
+    <label>Org Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NONE</fullName>
+                <default>true</default>
+                <label>NONE</label>
+            </value>
+            <value>
+                <fullName>External Panel</fullName>
+                <default>false</default>
+                <label>External Panel</label>
+            </value>
+            <value>
+                <fullName>Legacy Panel</fullName>
+                <default>false</default>
+                <label>Legacy Panel</label>
+            </value>
+            <value>
+                <fullName>Nexus-Delegated</fullName>
+                <default>false</default>
+                <label>Nexus-Delegated</label>
+            </value>
+            <value>
+                <fullName>MFS Employee</fullName>
+                <default>false</default>
+                <label>MFS Employee</label>
+            </value>
+            <value>
+                <fullName>Medscribe</fullName>
+                <default>false</default>
+                <label>Medscribe</label>
+            </value>
+            <value>
+                <fullName>WeCare</fullName>
+                <default>false</default>
+                <label>WeCare</label>
+            </value>
+            <value>
+                <fullName>MFS Remote T</fullName>
+                <default>false</default>
+                <label>MFS Remote T</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 7</fullName>
+                <default>false</default>
+                <label>MFS Remote 7</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 1</fullName>
+                <default>false</default>
+                <label>MFS Remote 1</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 2</fullName>
+                <default>false</default>
+                <label>MFS Remote 2</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 6</fullName>
+                <default>false</default>
+                <label>MFS Remote 6</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 9</fullName>
+                <default>false</default>
+                <label>MFS Remote 9</label>
+            </value>
+            <value>
+                <fullName>MFS Remote 8</fullName>
+                <default>false</default>
+                <label>MFS Remote 8</label>
+            </value>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

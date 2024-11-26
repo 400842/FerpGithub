@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LandPhoneNotAcceptingLetters</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( ISBLANK( Land_Phone__c )),
+    NOT (REGEX(Land_Phone__c , &quot;\\d{10}&quot;) )
+
+)</errorConditionFormula>
+    <errorDisplayField>Land_Phone__c</errorDisplayField>
+    <errorMessage>Land Phone Number Should be 10 digits and letters are not allowed to enter</errorMessage>
+</ValidationRule>

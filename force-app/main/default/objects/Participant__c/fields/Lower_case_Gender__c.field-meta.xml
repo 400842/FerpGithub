@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lower_case_Gender__c</fullName>
+    <externalId>false</externalId>
+    <formula>If (Text( Gender__c)= &apos;Male&apos;, &quot;male&quot;, IF(Text( Gender__c)= &apos;Female&apos;, &quot;female&quot;,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lower case Gender</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

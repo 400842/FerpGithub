@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF
+
+(Case__r.Document_Status__c== &apos;Failed&apos;,
+
+IMAGE(&quot;/resource/Failed_Red_Color&quot;,&quot;Red&quot;,15,15)+ &quot; Failed&quot;, 
+
+IF
+
+(Case__r.Document_Status__c== &apos;Passed&apos;,
+
+IMAGE(&quot;/resource/Passed_Green_Color&quot;,&quot;Green&quot;,15,15)+ &quot; Passed&quot;,
+
+IF
+
+(Case__r.Document_Status__c == &apos;Processing&apos;,
+
+IMAGE(&quot;/resource/Inprocess_Yellow_Color&quot;,&quot;Yellow&quot;,15,15)+ &quot; Processing&quot;,&apos;&apos;
+)
+
+)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Medical Records</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>FERP_Case_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>FERP Case Sharing Rule</label>
+        <sharedTo>
+            <group>FERP_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

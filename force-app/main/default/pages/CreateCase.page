@@ -1,0 +1,28 @@
+<apex:page standardController="Case">
+    <apex:includeLightning />
+    <div style="width:100%;height:750px;" id="CreateCaseContainer" />    
+    <script>            
+    $Lightning.use("c:CreateCaseApp", function() {
+        $Lightning.createComponent("c:CreateCase",
+                                   { 
+                                       borderColor : "#16325c", 
+                                       bgColor : "#16325c" ,
+                                       fontColor : "#FFF",                                       
+                                   },
+                                   "CreateCaseContainer",
+                                   function(cmp) { 
+                                       cmp.set("v.fromVfp" , 'FromVFP');                                       
+                                       console.log('AccountId :'+ cmp.get("v.AccountId"));
+                                       $A.eventService.addHandler({ "event": "c:SendDataToVFPage", "handler": retriveEventData });                                       
+                                       console.log('Component created');
+                                   });
+        
+
+        
+    });
+    function retriveEventData(event) {
+        var recordTypeId = event.getParam("currentRecId");        
+        sforce.one.navigateToSObject(recordTypeId);
+    }    
+    </script>
+</apex:page>

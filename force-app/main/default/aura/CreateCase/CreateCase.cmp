@@ -1,0 +1,135 @@
+<aura:component controller= "CreateCase" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="listOfAccounts" type="List" />  
+    <aura:attribute name="listOffee" type="List" />      
+    <aura:attribute name="listOfRfee" type="List" /> 
+    <aura:attribute name="AccountId" type="Id" />
+    <aura:attribute name="PriorityType" type="String" />
+    <aura:attribute name="ReviewType" type="String" /> 
+    <aura:attribute name="AppealType" type="String" />
+    <aura:attribute name="AppealCategory" type="String" />   
+    <aura:attribute name="ReviewTypeExist" type="Boolean" default="false" />    
+    <aura:attribute name="PriorityTypeExist" type="Boolean" default="false" />
+    <aura:attribute name="AppealTypeExist" type="Boolean" default="false" />   
+    <aura:attribute name="AppealCategoryExist" type="Boolean" default="false" />   
+    <aura:attribute name="fromVfp" type="string"/>  
+    <aura:attribute name="feeAmount" type="Double" default="0.00"/>   
+    <aura:attribute name="feeUnit" type="String"/>   
+    <aura:attribute name="rfeeAmount" type="Double" default="0.00"/>  
+    <aura:attribute name="rfeeUnit" type="String"/>  
+    <aura:attribute name="listOfReviewTypes" type="List" />
+    <aura:attribute name="listOfPriorityTypes" type="List" />
+    <aura:attribute name="listOfAppealTypes" type="List" />   
+    <aura:attribute name="listOfAppealCategory" type="List" />   
+    <aura:attribute name="currentValue" type="String"/>
+    <aura:attribute name="currentValueP" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    <aura:attribute name="recordTypeId" type="String"/>
+    <aura:attribute name="message" type="String" default="" />
+    <aura:attribute name="isError" type="Boolean" default="false" />
+    <aura:attribute name="isValid" type="Boolean" default="true" />
+    <aura:attribute name="tempDisabled" type="Boolean" default="false" /> 
+    <aura:attribute name="spinner" type="boolean" default="FALSE"/>
+	
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="vfEvent" type="c:SendDataToVFPage"/>
+
+    <lightning:card iconName="action:new_case" title="Create Case"> 
+        <div id="mainDiv">
+            <div class="slds-scrollable_y" style="height:450px;">
+                <aura:if isTrue="{!v.spinner}">
+                    <div aura:id="spinnerId" class="slds-spinner_container">
+                        <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                            <span class="slds-assistive-text">Loading...</span>
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+                </aura:if>
+                <lightning:recordEditForm recordTypeId="{!v.recordTypeId}" aura:id="editForm"  objectApiName="Case"  onsuccess="{!c.handleSuccess}" onerror="{!c.errorInformation}"  onload="{!c.showRequiredFields}">
+                    <aura:if isTrue="{!v.isError}">
+                        <ui:message title="Error" severity="error" closable="true">
+                            {!v.message}
+                        </ui:message>
+                    </aura:if>
+                    <lightning:messages aura:id="messages" class="slds-hide" />
+                    <div class="slds-grid slds-m-top_medium slds-grid_align-spread">
+                        
+                        <div class="slds-size_1-of-2 slds-p-right_small">   
+                            <div class="slds-p-bottom_medium">
+                                <lightning:inputField fieldName="AccountId" aura:id="AccountId" onchange="{!c.onAccountSelect}" class="customRequired none" />
+                            </div>      
+                            <aura:if isTrue="{!v.ReviewTypeExist}">
+                                <div class="slds-p-bottom_medium">
+                                    <lightning:select aura:id="rType" name="rType" label="Review Type" onchange="{! c.onRtypeSelect }">
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{!v.listOfReviewTypes}" var="rtype">                                        
+                                            <option text="{!rtype.Id}" label="{!rtype.Name}" ></option>
+                                        </aura:iteration>   
+                                    </lightning:select>
+                                </div>  
+                            </aura:if> 
+
+                            <aura:if isTrue="{!v.AppealTypeExist}">
+                                <div class="slds-p-bottom_medium">
+                                    <lightning:select aura:id="aType" name="aType" label="Appeal Type"  onchange="{! c.onAtypeSelect }">
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{!v.listOfAppealTypes}" var="atype">                                        
+                                            <option text="{!atype.Id}" label="{!atype.Name}" ></option>
+                                        </aura:iteration>   
+                                    </lightning:select>
+                                </div>  
+                            </aura:if> 
+
+                            <aura:if isTrue="{!v.AppealCategoryExist}">
+                                <div class="slds-p-bottom_medium">
+                                    <lightning:select aura:id="aCategory" name="aCategory" label="Appeal Category"  onchange="{! c.onaCatSelect }">
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{!v.listOfAppealCategory}" var="aCategory">                                        
+                                            <option text="{!aCategory.Id}" label="{!aCategory.Name}" ></option>
+                                        </aura:iteration>   
+                                    </lightning:select>
+                                </div>  
+                            </aura:if> 
+
+                            <aura:if isTrue="{!v.PriorityTypeExist}">
+                                <div class="slds-p-bottom_medium">
+                                    <lightning:select aura:id="pType" name="pType" label="Priority Type" onchange="{! c.onPtypeSelect }">
+                                        <option value="">--None--</option>
+                                        <aura:iteration items="{!v.listOfPriorityTypes}" var="ptype">                                        
+                                            <option text="{!ptype.Id}" label="{!ptype.Name}"></option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                            </aura:if> 
+                        </div>
+                    </div>
+                    
+                <!-- Hidden fields starts here -->
+                <lightning:inputField fieldName="Program_Review_Type__c" class=" hideElement" value="{!v.ReviewType}" aura:id="rTypeId" />
+                <lightning:inputField fieldName="Program_Priority__c" class=" hideElement" value="{!v.PriorityType}" aura:id="pTypeId" /> 
+
+                <lightning:inputField fieldName="Program_Appeal_Category__c" class=" hideElement" value="{!v.AppealCategory}" aura:id="aCatId" />
+                <lightning:inputField fieldName="Program_Appeal_Type__c" class=" hideElement" value="{!v.AppealType}" aura:id="aTypeId" /> 
+
+                <lightning:inputField fieldName="Fee_Amount__c" class=" hideElement" value="{!v.feeAmount}" aura:id="famnt" />   
+                <lightning:inputField fieldName="Billing_Fee_Unit__c" class=" hideElement" value="{!v.feeUnit}" aura:id="famut" />   
+                <lightning:inputField fieldName="Review_Fee__c" class=" hideElement" value="{!v.rfeeAmount}" aura:id="rfamnt" />                
+                <lightning:inputField fieldName="Review_Fee_Unit__c" class=" hideElement" value="{!v.rfeeUnit}" aura:id="rfamut" />   
+
+                </lightning:recordEditForm>
+                <div class="slds-m-top_xx-small slds-align_absolute-center">
+                    <lightning:button label="Clear" title="Neutral action" onclick="{!c.handleCancel}"/>
+                    <lightning:button disabled="{!v.disabled}" variant="brand" type="button" onclick="{!c.handlesave}" name="save" label="Save" class="slds-float_right" />
+                </div>                
+            </div>
+        </div>   
+        <div id="secondSec" style="display:none; position:relative;" >
+            <aura:if isTrue="{!v.showSpinner}">
+                <div class="slds-spinner_container" style= "margin-top: 15%;" >
+                    <lightning:spinner variant="brand" size="medium" />
+                </div>
+            </aura:if>       
+      
+        </div>         
+    </lightning:card>        
+</aura:component>

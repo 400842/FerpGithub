@@ -1,0 +1,46 @@
+<aura:component controller="CasedisputeController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Caseinfo" type="Case" />
+    <aura:attribute name="specialtyList" type="List" />
+    <aura:attribute name="requestSelected" type="List" default="[]" />
+    <aura:attribute name="requestedSpecialty" type="String" />
+    <aura:attribute name="isPanelReviewRequired" type="Boolean" default="false" />
+    <aura:attribute name="activeSections" type="List" default="['ic','ev','pa','od']" />
+    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Case"  onsuccess="{!c.handleSuccess}">
+        <div class="slds-box">
+            <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="{! v.activeSections }">
+                    
+                    <lightning:accordionSection name="ic" label="Initial Completeness">
+            <lightning:inputField fieldName="Review_Started__c" />
+            <lightning:inputField fieldName="Review_Start_Date__c" />            
+            <lightning:inputField fieldName="Completion_Date__c" />
+            <lightning:inputField fieldName="Result__c" />
+                </lightning:accordionSection>
+                <lightning:accordionSection name="ev" label="Eligibility Verification">
+            <lightning:inputField fieldName="Eligibility_Review_Started__c" />
+            <lightning:inputField fieldName="Eligibility_Start_Date__c" />            
+            <lightning:inputField fieldName="Eligibility_Completion_Date__c" />
+            <lightning:inputField fieldName="Eligibility_Result__c" />
+                </lightning:accordionSection>
+                <lightning:accordionSection name="pa" label="Pre-Acceptance Review">
+            <lightning:inputField fieldName="Review_Started__c" />
+            <lightning:inputField fieldName="PA_Start_Date__c" />            
+            <lightning:inputField fieldName="PA_Completion_Date__c" />
+            <lightning:inputField fieldName="PA_Result__c" />
+            <lightning:inputField fieldName="Needs_RI__c" />            
+            <lightning:inputField fieldName="Ready_For_Ack_Letter__c" />
+            <lightning:inputField fieldName="Ack_Sent__c" />
+                </lightning:accordionSection>
+                <lightning:accordionSection name="od" label="Overall Decision">       
+            <lightning:inputField fieldName="Decision_Reason__c" />
+            <lightning:inputField fieldName="Review_Comments__c" />
+                </lightning:accordionSection>
+            </lightning:accordion>
+        </div>
+        <div class="slds-align_absolute-center slds-p-top_small">                  
+            <lightning:button variant="brand" type="submit" label="Save" />
+        </div>
+    </lightning:recordEditForm>
+    
+</aura:component>

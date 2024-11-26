@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QC_Status__c</fullName>
+    <label>QC Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ready for QC</fullName>
+                <default>false</default>
+                <label>Ready for QC</label>
+            </value>
+            <value>
+                <fullName>Returned to AO</fullName>
+                <default>false</default>
+                <label>Returned to AO</label>
+            </value>
+            <value>
+                <fullName>Ready to Close</fullName>
+                <default>false</default>
+                <label>Ready to Close</label>
+            </value>
+            <value>
+                <fullName>Ready for Client Approval</fullName>
+                <default>false</default>
+                <label>Ready for Client Approval</label>
+            </value>
+            <value>
+                <fullName>Awaiting Client Approval</fullName>
+                <default>false</default>
+                <label>Awaiting Client Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

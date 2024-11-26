@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MD_Review</fullName>
+    <fields>Name</fields>
+    <fields>Case_Number__c</fields>
+    <fields>Expert_Review__c</fields>
+    <fields>Review_Status__c</fields>
+    <fields>Review_Due_Date__c</fields>
+    <fields>Review_Returned_Date__c</fields>
+    <label>MD Review</label>
+</CompactLayout>

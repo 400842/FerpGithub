@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_File_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(Expert_review_Name__c), Case__r.Document_Case_Number__c+&apos;_&apos;+TEXT(Review_Number__c) +&apos;_Review Form&apos;, Case__r.Document_Case_Number__c+&apos;_&apos;+TEXT(Review_Number__c) +&apos;_Review Form&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Document File Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

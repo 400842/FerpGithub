@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( Override__c , ISPICKVAL( Override_Reason__c , &quot;&quot;), FALSE)</errorConditionFormula>
+    <errorDisplayField>Override_Reason__c</errorDisplayField>
+    <errorMessage>Please specify Override Reason</errorMessage>
+</ValidationRule>

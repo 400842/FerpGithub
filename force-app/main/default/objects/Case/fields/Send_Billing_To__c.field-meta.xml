@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Billing_To__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Account.Send_Billing_To__c , &quot;Client; &quot;), &quot;Client&quot;, NULL)  &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Enrollee; &quot;), &quot;Enrollee&quot;, NULL)  &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Health Plan; &quot;), &quot;Health Plan&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Law Firm; &quot;), &quot;Law Firm&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;MCO; &quot;), &quot;MCO&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Provider; &quot;), &quot;Provider&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Provider Representative; &quot;), &quot;Provider Representative&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Health Plan; &quot;), &quot;Health Plan&quot;, NULL) &amp;
+IF(INCLUDES( Account.Send_Billing_To__c , &quot;Representative&quot;), &quot;Representative&quot;, NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Send Billing To</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

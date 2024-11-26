@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Helvetica; font-size: 26px">Forms</h1><br/>
+            <p class = "smallFont"><b>HHS Federal External Review Request Form</b> - If you are submitting your request by mail or fax, you must complete all sections of the form below.</p><br  />
+                <a class = "smallFont" href="{!$Resource.FERP_External_Review_Request_Form}" style="color:#0066FF">HHS-Administered Federal External Review Request Form</a><br/><br/>
+            <p class = "smallFont"><b>HHS Federal External Review Process Appointment of Representative Form</b> - If you would like to have another person make an external review request on your behalf, both you and your authorized representative will need to complete and sign this form. Section 1 of the form is an Appointment of Representative section that must be completed and signed by you, the Claimant. Section 2 of the form is an Acceptance of Appointment section that must be completed and signed by the representative.</p><br />
+				<a class = "smallFont" href="{!$Resource.FERP_Representative_Form}" style="color:#0066FF">Appointment of Representative Form</a>
+        </div>
+    </div>
+</aura:component>

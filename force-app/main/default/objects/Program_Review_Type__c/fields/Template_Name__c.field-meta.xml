@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Template_Name__c</fullName>
+    <label>Template Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dismissal Letter</fullName>
+                <default>false</default>
+                <label>Dismissal Letter</label>
+            </value>
+            <value>
+                <fullName>Decision Letter</fullName>
+                <default>false</default>
+                <label>Decision Letter</label>
+            </value>
+            <value>
+                <fullName>Review Letter</fullName>
+                <default>false</default>
+                <label>Review Letter</label>
+            </value>
+            <value>
+                <fullName>Acknowledgement Letter</fullName>
+                <default>false</default>
+                <label>Acknowledgement Letter</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Notice Letter</fullName>
+                <default>false</default>
+                <label>Notice Letter</label>
+            </value>
+            <value>
+                <fullName>Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MD Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MD Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MA ACO RBPO Decision Letter</fullName>
+                <default>false</default>
+                <label>MA ACO RBPO Decision Letter</label>
+            </value>
+            <value>
+                <fullName>MA Infertility Decision Letter</fullName>
+                <default>false</default>
+                <label>MA Infertility Decision Letter</label>
+            </value>
+            <value>
+                <fullName>MA Experimental Decision Letter</fullName>
+                <default>false</default>
+                <label>MA Experimental Decision Letter</label>
+            </value>
+            <value>
+                <fullName>MA Medical Necessity Decision Letter</fullName>
+                <default>false</default>
+                <label>MA Medical Necessity Decision Letter</label>
+            </value>
+            <value>
+                <fullName>MA Continuation of Coverage Decision Letter</fullName>
+                <default>false</default>
+                <label>MA Continuation of Coverage Decision Letter</label>
+            </value>
+            <value>
+                <fullName>MA ACO RBPO Review Form</fullName>
+                <default>false</default>
+                <label>MA ACO RBPO Review Form</label>
+            </value>
+            <value>
+                <fullName>MA Experimental Review Form</fullName>
+                <default>false</default>
+                <label>MA Experimental Review Form</label>
+            </value>
+            <value>
+                <fullName>MA Infertility Review Form</fullName>
+                <default>false</default>
+                <label>MA Infertility Review Form</label>
+            </value>
+            <value>
+                <fullName>MA Medical Necessity Review Form</fullName>
+                <default>false</default>
+                <label>MA Medical Necessity Review Form</label>
+            </value>
+            <value>
+                <fullName>MA Continuation of Coverage Review Form</fullName>
+                <default>false</default>
+                <label>MA Continuation of Coverage Review Form</label>
+            </value>
+            <value>
+                <fullName>MA ACO RBPO Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MA ACO RBPO Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MA Medical Necessity Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MA Medical Necessity Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MA Infertility Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MA Infertility Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MA Experimental Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MA Experimental Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>MA Continuation of Coverage Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>MA Continuation of Coverage Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>RI Decision Letter</fullName>
+                <default>false</default>
+                <label>RI Decision Letter</label>
+            </value>
+            <value>
+                <fullName>RI Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>RI Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>RI Review Form</fullName>
+                <default>false</default>
+                <label>RI Review Form</label>
+            </value>
+            <value>
+                <fullName>PA DOH Expert Review Form</fullName>
+                <default>false</default>
+                <label>PA  DOH Expert Review Form</label>
+            </value>
+            <value>
+                <fullName>PA DOH Decision Letter - MD Template</fullName>
+                <default>false</default>
+                <label>PA DOH Decision Letter - MD Template</label>
+            </value>
+            <value>
+                <fullName>PA DOH Decision Letter Sample</fullName>
+                <default>false</default>
+                <label>PA DOH Decision Letter Sample</label>
+            </value>
+            <value>
+                <fullName>PA DOH Expert Review Form - MD Template</fullName>
+                <default>false</default>
+                <label>PA DOH Expert Review Form - MD Template</label>
+            </value>
+            <value>
+                <fullName>PA DOH Decision Letter -Standard Template</fullName>
+                <default>false</default>
+                <label>PA DOH Decision Letter -Standard Template</label>
+            </value>
+            <value>
+                <fullName>PA DOH Decision Letter - MD Template Sample</fullName>
+                <default>false</default>
+                <label>PA DOH Decision Letter - MD Template Sample</label>
+            </value>
+            <value>
+                <fullName>FERP_Benefit Exclusion</fullName>
+                <default>false</default>
+                <label>FERP_Benefit Exclusion</label>
+            </value>
+            <value>
+                <fullName>FERP_Untimely Request</fullName>
+                <default>false</default>
+                <label>FERP_Untimely Request</label>
+            </value>
+            <value>
+                <fullName>FERP_Failure to Respond-Overturn</fullName>
+                <default>false</default>
+                <label>FERP_Failure to Respond-Overturn</label>
+            </value>
+            <value>
+                <fullName>FERP_Plan Approval</fullName>
+                <default>false</default>
+                <label>FERP_Plan Approval</label>
+            </value>
+            <value>
+                <fullName>FERP_Non Medical Judgment (Claim Processing)</fullName>
+                <default>false</default>
+                <label>FERP_Non Medical Judgment (Claim Processing)</label>
+            </value>
+            <value>
+                <fullName>FERP_Internal Appeals Not Exhausted</fullName>
+                <default>false</default>
+                <label>FERP_Internal Appeals Not Exhausted</label>
+            </value>
+            <value>
+                <fullName>FERP_Plan Not Elected</fullName>
+                <default>false</default>
+                <label>FERP_Plan Not Elected</label>
+            </value>
+            <value>
+                <fullName>FERP_Overturned_Decision Letter</fullName>
+                <default>false</default>
+                <label>FERP_Overturned_Decision Letter</label>
+            </value>
+            <value>
+                <fullName>FERP_Upheld_Decision Letter</fullName>
+                <default>false</default>
+                <label>FERP_Upheld_Decision Letter</label>
+            </value>
+            <value>
+                <fullName>Medical Director Decision Letter</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Medical Director Decision Letter</label>
+            </value>
+            <value>
+                <fullName>NC Decision Letter</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NC Decision Letter</label>
+            </value>
+            <value>
+                <fullName>PA DOH Decision Letter - MD Template  Sample</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PA DOH Decision Letter - MD Template  Sample</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

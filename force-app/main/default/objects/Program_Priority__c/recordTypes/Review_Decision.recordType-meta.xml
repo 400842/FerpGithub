@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Decision</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Child_Reference_Data</compactLayoutAssignment>
+    <label>Review Decision</label>
+    <picklistValues>
+        <picklist>Decision_Code__c</picklist>
+        <values>
+            <fullName>Overturn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial Overturn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uphold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Case Type Queue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priority Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Decision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unit__c</picklist>
+        <values>
+            <fullName>Business Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calendar Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per Hour</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

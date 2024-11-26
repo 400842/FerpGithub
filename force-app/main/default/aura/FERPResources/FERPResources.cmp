@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Helvetica; font-size: 26px">Resources</h1><br/>
+            <p class = "smallFont"><b>Maximus and HHS held a webinar on March 14, 2012 and March 27, 2012 to describe the HHS-Administered Federal External Review Process. Presentation slides are now available:</b><br/>
+                <a class = "smallFont" href="https://externalappeal.cms.gov/ferpportal/public/docs/webinar_slides.pdf" target="_blank" style="color:#0066FF">https://externalappeal.cms.gov/ferpportal/public/docs/webinar_slides.pdf</a><br/><br/>
+                <p class = "smallFont"><b> To learn more about the federal rules and technical guidance on Internal Claims and Appeals and the External Review Process, please visit the CMS website:</b></p>
+                <a class = "smallFont" href="http://www.cciio.cms.gov/resources/regulations/index.html#ea" target="_blank" style="color:#0066FF">http://www.cciio.cms.gov/resources/regulations/index.html#ea</a><br/><br/>
+                <p class = "smallFont"><b> To learn more about the federal external review process (FAQs, letters, news releases, and other resources), please visit the CMS website:</b></p>
+                <a class = "smallFont" href="https://www.cms.gov/marketplace/about/oversight" target="_blank" style="color:#0066FF">http://www.cms.gov.cciio</a><br/><br/>
+                <p class = "smallFont"><b>For consumer information on rights to appeal denials, please visit the Healthcare.gov website:</b></p>
+            <a class = "smallFont" href="http://www.healthcare.gov/news/factsheets/2012/06/appeals06152012a.html#steps" target="_blank" style="color:#0066FF">http://www.healthcare.gov/news/factsheets/2012/06/appeals06152012a.html#steps</a></p>
+        </div>
+    </div>
+</aura:component>

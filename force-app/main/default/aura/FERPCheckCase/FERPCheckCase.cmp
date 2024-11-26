@@ -1,0 +1,111 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global"
+    controller="ChechkCasecontroller">
+    <aura:attribute name="name" type="String" default="" />
+    <aura:attribute name="email" type="String" default="" />
+    <aura:attribute name="caseId" type="String" default="" />
+    <aura:attribute name="case" type="Map" />
+    <aura:attribute name="isFound" type="Boolean" default="false" />
+    <aura:attribute name="fileUploadSuccess" type="Boolean" default="false" />
+    <aura:attribute name="isCase" type="Boolean" default="false" />
+    <aura:attribute name="isEmail" type="Boolean" default="false" />
+    <aura:attribute name="isNotfound" type="Boolean" default="false" />
+    <aura:attribute name="hasNoFile" type="Boolean" default="false" />
+    <aura:attribute name="activeSections" type="List" default="['A','B']" />
+    <aura:attribute name="eligibleForFileUpload" type="Boolean" default="false" />
+    <aura:attribute name="showSelectedFile" type="boolean" default="false" />
+    <aura:attribute name="filename" type="String" default="No File Selected.." />
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-card">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size--1-of-1 slds-p-around_small">
+                <h1 style="font-family: Helvetica; font-size: 26px">Check Case Status</h1>
+                <div class="smallFont">To check the status of a request that was submitted online, you
+                    will need your case# and the email address you used to initiate the review.</div>
+                <br /><br />
+                <form class="slds-form--horizontal">
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <lightning:input class="slds-size--6-of-6 slds-large-size--3-of-6 slds-p-around_small"
+                            type="text" label="Case Number" name="CaseNo" value="{!v.name}"
+                            placeholder="Enter Case number" /> &nbsp; <aura:if isTrue="{!v.isCase}">
+                            <div class="slds-text-body_small">This field is required.</div>
+                        </aura:if><br />
+                        <lightning:input class="slds-size--6-of-6 slds-large-size--3-of-6 slds-p-around_small"
+                            type="text" label="Email Address" name="email" value="{!v.email}"
+                            placeholder="Enter Requestor Email" /> &nbsp; <aura:if isTrue="{!v.isEmail}">
+                            <div class="slds-text-body_small">This field is required.</div>
+                        </aura:if><br />
+                        <lightning:button name="search" label="Check Case Status" variant="brand"
+                            onclick="{!c.searchCase}" />
+                    </div>
+                </form>
+                <aura:if isTrue="{!v.isFound}">
+                    <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections}">
+                        <lightning:accordionSection name="A" label="Case Status">
+                    <div class="row">
+                        <lightning:input name="input1" label="Case Id" value="{!v.case.caseId}" readonly="true"
+                            variant="label-inline" />
+                        <lightning:input name="input2" label="Status" value="{!v.case.status}" readonly="true"
+                            variant="label-inline" />
+                            <lightning:input type="text" name="input3" label="Submitted Date" value="{!v.case.createdDate}" variant="label-inline" readonly="true"/>
+                            <aura:if isTrue="{!not(empty(v.case.eligibleForReviewDate))}">
+                            <lightning:input type="text" name="input4" label="Eligible For Review Date" value="{!v.case.eligibleForReviewDate}" variant="label-inline" readonly="true"/>
+                        </aura:if>
+                        <aura:if isTrue="{!not(empty(v.case.assignedToReviewerDate))}">
+                            <lightning:input type="text" name="input5" label="Assigned To Reviewer Date" value="{!v.case.assignedToReviewerDate}" variant="label-inline" readonly="true"/>
+                        </aura:if>
+                        <aura:if isTrue="{!not(empty(v.case.expectedDecisionDate))}">
+                            <lightning:input type="text" name="input6" label="Expected Decision Date" value="{!v.case.expectedDecisionDate}" variant="label-inline" readonly="true"/>
+                        </aura:if>
+                    </div>
+                    </lightning:accordionSection>
+                    <aura:if isTrue="{!v.eligibleForFileUpload}">
+                        <lightning:accordionSection name="B" label="Upload Documents">
+                        <div align="center">
+                            <!-- Document Change SS-->
+                            <!--<c:datsi aura:id="datsi" ondatsiuploadsuccess="{!c.handleUploadSuccess}" />-->
+                            <div class="slds-text-heading_small">All files must be uploaded in PDF format, and must be
+                                less than 100MB in size.<br />
+                                Files over 100MB should be split into smaller files and uploaded separately.</div><br />
+                             <c:uploadFileCmp aura:id="fileUploader" onfileuploadsuccess="{!c.handleUploadSuccess}"/>
+                            <!--lightning:input type="file" name="file" aura:id="fileId" accept=".pdf, .doc, .docx" multiple="true"
+                                onchange="{!c.handlefileschange}" /><br />
+                            <aura:if isTrue="{!v.showSelectedFile}">
+                                <div class="selectedFile">
+
+                                    <span class="docFileName slds-p-top_medium">{!v.filename}</span> &nbsp; &nbsp;
+                                    <span>
+                                        <button class="slds-button" onclick="{!c.Clearfiles}">
+                                            <lightning:icon class="iconcolor" iconName="utility:close" size="x-small"
+                                                alternativeText="cancel" title="cancel"></lightning:icon>
+                                        </button>
+                                    </span>
+
+                                </div>
+                                
+                                
+                            </aura:if>
+                            <aura:if isTrue="{!v.hasNoFile}">
+                    <p style="font-weight:bold;color:red">Please upload file.</p>
+                </aura:if> -->
+                <aura:if isTrue="{!!v.fileUploadSuccess}">
+                            <lightning:button name="saveDocs" label="Save Documents" variant="brand"
+                            onclick="{!c.saveDocuments}" />
+                        </aura:if>
+                        </div>
+                        
+                    </lightning:accordionSection>
+                    
+                    </aura:if>
+                    </lightning:accordion>
+                </aura:if>
+                <aura:if isTrue="{!v.fileUploadSuccess}">
+                    <p style="font-weight:bold;color: green">Files uploaded successfully.</p>
+                </aura:if>
+                <aura:if isTrue="{!v.isNotfound}">
+                    <p style="font-weight:bold;color:red">No matching case found.</p>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

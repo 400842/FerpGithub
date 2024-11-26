@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Status</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND
+(ISPICKVAL(Review_Status__c , &apos;Assignment Offered&apos;),
+NOT(ISPICKVAL(Delivery_Method__c , &apos;MOVEit&apos;)),
+Medical_Records_Status__c &lt;&gt; &apos;Passed&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Review_Status__c</errorDisplayField>
+    <errorMessage>You can not change the review status to Assignment Offered for the selected delivery method if there are no documents shared with an expert to review or if the documents are being processed in MERA. Please share the required documents with an expert.</errorMessage>
+</ValidationRule>

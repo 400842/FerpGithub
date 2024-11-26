@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EST_Created_Date__c</fullName>
+    <formula>IF( ISPICKVAL(CreatedBy.TimeZoneSidKey, &apos;America/Chicago&apos;), CreatedDate + 60/1440, 
+
+IF(ISPICKVAL(CreatedBy.TimeZoneSidKey, &apos;America/Denver&apos;),CreatedDate + 120/1440,
+
+
+IF(ISPICKVAL(CreatedBy.TimeZoneSidKey, &apos;America/Phoenix&apos;),CreatedDate + 180/1440,
+
+
+IF(ISPICKVAL(CreatedBy.TimeZoneSidKey, &apos;America/Los_Angeles&apos;),CreatedDate + 180/1440,CreatedDate))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>EST Created Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

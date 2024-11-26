@@ -1,0 +1,223 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Arial, sans-serif; font-size: 16px;color:rgb(131, 111, 23);"><u>HHS-Administered Federal External Review Process Privacy Notice</u></h1>
+            <p class = "smallFont">Last Updated September 18, 2018</p><br/>
+            <h2 class = "smallFont"><u>MAXIMUS Commitment to Privacy</u></h2>
+            <p class = "smallFont">Thank you for visiting the Federal External Review Process website operated by MAXIMUS Federal Services. This website, located at https://externalappeal.cms.gov, is available 24 hours a day and 7 days a week.</p>
+            <br/>
+            <p class = "smallFont">This portal allows consumers to request an external review of a health insurance plan decision and submit online appeals which may include submission of medical records. Please read this document carefully before you access and use this service.</p>
+            <br/>
+            <p class = "smallFont">Confidentiality is a top priority at MAXIMUS. We are committed to ensuring the security and confidentiality of information on the <a style="color:blue" href="/s/">HHS-Administered Federal External Review Process</a> website. MAXIMUS respects your privacy and we have developed the following privacy notice to demonstrate our commitment to you.</p>
+            <br/><p class = "smallFont">This privacy notice applies to:</p>
+            <br/>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >Information we collect about you
+            </li>
+            <li class = "smallFont left15" >How we use the information</li>
+            <li class = "smallFont left15" >Choices you have about how we collect and use your information</li></ul>
+            <br/>
+            <p class = "smallFont">This privacy notice does not apply to:</p>
+            <br/>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >Privacy practices associated with any activities done outside your use of this website</li>
+            <li class = "smallFont left15" >Websites other than this website</li>
+            <li class = "smallFont left15" >Products and services not available or enabled through the website</li>   </ul>
+            <br/>
+            <h2 class = "smallFont"><u>Information We Collect</u></h2>
+            <p class = "smallFont">In order to use some of this website's features, such as requesting an online external review, you may be asked to provide or verify personal and/or business information.
+                
+            </p><br/>
+            <p class = "smallFont">You provide this personal and business information voluntarily when you request an online external review.
+                
+            </p><br/>
+            <p class = "smallFont">We clearly identify data you must provide so we can deliver the services or information you have requested. MAXIMUS may ask that you provide or verify the following personal and business sensitive information; the list is not exhaustive:
+                
+            </p><br/>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >First and last name
+            </li> 
+            <li class = "smallFont left15" >Mailing address
+            </li>
+            <li class = "smallFont left15" >Telephone number
+            </li>
+            <li class = "smallFont left15" >Fax number
+            </li>
+            <li class = "smallFont left15" >E-mail address
+            </li>
+            <li class = "smallFont left15" >Insurance ID number
+            </li>
+            <li class = "smallFont left15" >Health Plan Policy Name
+            </li>
+            <li class = "smallFont left15" >Provider Name
+            </li></ul><br/>
+            <p class = "smallFont">MAXIMUS uses the information collected to process external review requests made by a consumer who was denied benefits or by the person asking for the review on behalf of the consumer.
+                
+            </p><br/>
+            <p class = "smallFont">MAXIMUS maintains policies that protect the confidentiality of personal information, obtained in the course of its regular business functions. MAXIMUS privacy policies impose a number of standards to guard the confidentiality of Insurance ID numbers and other personal information, prohibit the unlawful disclosure of Insurance ID number, and limit access to Insurance ID numbers. MAXIMUS safeguards personal information by having physical, technical, and administrative safeguards in place.
+                
+            </p><br/>
+            <p class = "smallFont">It is your choice whether to give us this information. However, if you choose not to provide it you will not be able to submit an external review request via the website.
+                
+            </p><br/>
+            <h2 class = "smallFont"><u>How We Use and Share the Information Collected
+                </u></h2>
+            <p class = "smallFont">The collection of information through this website and the disclosure of that information are subject to the provisions of the Health Insurance Portability and Accountability Act (HIPAA) (Public Law 104-191). To learn more about Health Information Privacy, visit HHS.gov at <a style="color:blue" href="http://www.hhs.gov/ocr/privacy/index.html">http://www.hhs.gov/ocr/privacy/index.html</a>.
+
+</p><br/>
+            <p class = "smallFont">Except as we state below or as otherwise authorized by law, MAXIMUS will only collect or disclose personal information collected through this website if you have agreed to the collection or disclosure of that personal information. MAXIMUS may collect or disclose personal information without your agreement if it is:
+
+</p><br/>
+<ul class="overrideUL">
+            <li class = "smallFont left15" >Necessary to perform our statutory duties as authorized by law, or authorized by state or federal statute or regulation
+</li>
+             <li class = "smallFont left15" >To comply with valid legal process such as a search warrant, subpoena or court order
+            </li></ul><br/>
+            <p class = "smallFont">MAXIMUS may disclose personal information to its agents, affiliates, and subcontractors to allow them to perform certain functions relating to your appeal.
+
+</p><br/>
+            <p class = "smallFont">MAXIMUS may also disclose personal information to federal or state law enforcement authorities to enforce its rights against unauthorized access or attempted unauthorized access to MAXIMUS information technology assets.
+
+</p><br/>
+            <p class = "smallFont">MAXIMUS does not share your personal information with unaffiliated third parties. We may use your information to improve the content, navigation, and efficiency of the website.
+
+</p><br/>
+            <p class = "smallFont">In order to make our website better for you, we may use and share with others aggregated or anonymous (not personally identifiable) information that we have collected based on web usage data, surveys, or statistical information that we have compiled about our users.
+
+</p><br/>
+            <h2 class = "smallFont"><u>Information We Retain</u></h2>
+            <p class = "smallFont">MAXIMUS retains the data collected to (1) process appeal requests made by an appellant or appealing party, (2) track appeal data, and (3) respond to future correspondence related to the case. Information originally collected in traditional paper systems can be submitted electronically. Electronically submitted information is maintained and destroyed pursuant to the Federal Records Act and are subject to the Privacy Act.
+
+            </p><br/>
+            <h2 class = "smallFont"><u>Web Privacy Statement</u></h2>
+           <p class = "smallFont">Our website servers automatically collect and record website usage data from you when you visit the website. If you browse while on the website, we will keep:
+
+            </p><br />
+            <ul class="overrideUL">
+                <li class = "smallFont left15" >Your Internet Protocol (IP) address – the number assigned to your computer; this is not your e-mail address</li>
+                <ul >
+                <li class = "smallFont left30" >We count unique IP addresses to learn how many visitors go to each web page during specific times. Counting total visitors helps us decide how to make the website work better in the future.</li>
+                </ul>
+                <li class = "smallFont left15" >The type of web browser you used during your visit – for example, Internet Explorer, Google Chrome, or Firefox</li>
+ <ul >
+     <li class = "smallFont left30" >Web pages do not always display the same on every type or version of web browser. We use web browser information to make sure the website is easily accessible across a range of browsers.</li></ul>
+            </ul>
+            <p class = "smallFont">We may also collect the following information:
+
+            </p><br/>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >The Internet domain you visited from
+</li>
+            <li class = "smallFont left15" >The date and time you accessed the site
+</li>
+            <li class = "smallFont left15" >The pages, files, documents and links you visit (to improve the options we can provide to you and to make sure that we display our information in a way that suits you)
+</li>
+         <li class = "smallFont left15" >The Internet address of the website from which a link to the website is made
+            </li></ul>
+            <br/>
+            <h2 class = "smallFont"><u>Cookies and “Do Not Track” Signals
+</u></h2>
+            <p class = "smallFont">Like most websites, we employ "cookies," "web beacons," and similar devices to help you more efficiently use the Site and to track your activities. A cookie is small amount of data that is transferred to your browser by a web server and can only be read by the server that gave it to you. It functions as your identification card and enables MAXIMUS to record your activities and preferences. It cannot be executed as code or deliver viruses. Cookies from MAXIMUS can only be read by MAXIMUS websites. A web beacon is a small transparent gif image that is embedded in an HTML page or email used to track when the page or email has been viewed. MAXIMUS uses cookies and similar devices to track your use of the Site, types of Products and Services viewed and information downloaded, count visitors we receive daily, and our web servers automatically log the IP/Internet address of your computer. MAXIMUS does not generally use this information to identify you personally. If you do not want your browser to accept cookies, you can modify the cookie option in your browser’s settings. However, some Site features or services may not function properly or be accessible without cookies.
+
+            </p><br/>
+            <p class = "smallFont">"Do Not Track" is a preference you can set in your web browser to let the websites you visit know that you do not want them collecting information about you. The Site does not currently respond to a "Do Not Track" or similar signals.
+
+            </p><br />
+            <h2 class = "smallFont"><u>California Residents
+</u></h2>
+            <p class = "smallFont">If you are a California resident, California law (Calif. Bus. &amp; Prof. Code § 22575-22578) entitles you to request information concerning whether your personal information has been disclosed to nonaffiliated third parties for their direct marketing purposes. We do not share your personal information with nonaffiliated third parties for such purposes.
+
+</p>
+            <br/>
+            <h2 class = "smallFont"><u>Security
+</u></h2>
+            <p class = "smallFont">MAXIMUS uses various technological and procedural security measures in order to protect the personal information we collect through the Site from loss, misuse, alteration or destruction. We have documented Information Security &amp; Privacy policies to address data protection. We regularly provide information security and privacy awareness training to our employees. However, you should be aware that, due to the open and unsecured character of the internet, MAXIMUS cannot be responsible for the security of transmissions of personal information over the internet. We have prepared a formal incident response plan in case of a data breach.
+
+</p>
+            <br/>
+            <h2 class = "smallFont"><u>Children
+</u></h2>
+            <p class = "smallFont">MAXIMUS is committed to complying fully with the Children's Online Privacy Protection Act. The Site is not directed towards children under 13 years of age, nor do we knowingly collect information from children under the age of 13.MAXIMUS appreciates your cooperation with this federally mandated requirement.
+
+</p>
+            <br/>
+            <h2 class = "smallFont"><u>Links
+</u></h2>
+            <p class = "smallFont">Our Site may contain links to other sites. Links do not imply endorsement by MAXIMUS. Please be aware that these other sites are not subject to the MAXIMUS privacy notice and we are not responsible for the privacy practices of such other sites. We recommend that you review the privacy policies of those sites when you visit them.
+
+</p>
+            <br/>
+            
+            <h2 class = "smallFont"><u>PRIVACY ACT STATEMENT
+                </u>
+            </h2><br />
+            <p class = "smallFont">"THIS INFORMATION IS BEING COLLECTED UNDER CONTRACT WITH THE UNITED STATES DEPARTMENT OF HEALTH AND HUMAN SERVICES, CENTERS FOR MEDICARE &amp; MEDICAID SERVICES FOR USE BY THE MEDICARE PROGRAM."
+
+            </p>
+            <br/>
+            <ul class="overrideUL">
+            <p class = "smallFont left15" >1.The legal authority for the collection of information is authorized by section 1869 (c)(3) of the Social Security Act</p>
+            <p class = "smallFont left15" >2.The information provided will be used to document and make a determination about your appeal.</p>
+            <p class = "smallFont left15" >3.Submission of the information requested is voluntary, but failure to provide all or any part of the requested information may affect the determination of your appeal.</p>
+            <p class = "smallFont left15" >4.Information you furnish may be disclosed by MAXIMUS to another person or government agency only with respect to the Medicare Program and to comply with Federal laws requiring or 
+                                             permitting the disclosure of information or the exchange of information between MAXIMUS and other agencies. MAXIMUS may disclose information to its agents, affiliates, and 
+                                             subcontractors to allow them to perform certain functions relating to your appeal. Information may be given to health insurance providers and suppliers of services (and their authorized billing agents) directly or through fiscal intermediaries or carriers, for administration of Title XVIII.</p><br />
+            </ul>
+            <p class = "smallFont">To learn more about the Privacy Act, visit USA.gov at <a style="color:blue" href="http://www.usa.gov/Topics/Reference-Shelf/FOIA.shtml#Privacy_Act_of_1974">http://www.usa.gov/Topics/Reference-Shelf/FOIA.shtml#Privacy_Act_of_1974</a>
+
+</p><br/> 
+            <p class = "smallFont">Groups of records that contain information about an individual and are designed to be retrieved by the individual's name or other personal identifier linked to the individual are covered by the Privacy Act of 1974, as amended (5 U.S.C. Section 552a). CMS Systems of Record Notices are published in the Federal Register and posted on the CMS Senior Official for Privacy Website.
+
+</p><br/> 
+            <p class = "smallFont">Public Law 100-503, the Computer Matching and Privacy Protection Act of 1988, permits the government to verify information by way of computer matches. Anyone who knowingly and willfully makes or causes to be made a false statement or representation of a material fact for use in determining a right to payment under the Social Security Act commits a crime punishable under Federal law by fine, imprisonment, or both.
+
+</p><br/> 
+            <h2 class = "smallFont"><u>Reviewing and Correcting Your Information
+</u></h2> 
+            <p class = "smallFont">We try to keep information about you accurate and current. To change or update any personal information maintained by our program, you may write MAXIMUS at the address below. In your correspondence, please indicate with as much detail as possible the location on this Site or otherwise where you provided your personal information. Personal information maintained by any of our contracts administered on behalf of federal, state or local government entities should be corrected by contacting the customer service department in the individual program. Please refer to the section on "How to Contact Us"
+
+</p><br/>
+            
+            <h2 class = "smallFont"><u>Changes to this Privacy Notice
+</u></h2> 
+            <p class = "smallFont">We will occasionally update this privacy notice. When we do, we will revise the "last updated" date at the top of the privacy notice. Please check the Site from time to time for the most current version of our privacy notice. Your continued use of the Site after we have notified you of changes as described above constitutes your acceptance of the changes.
+
+</p><br/>
+            
+            <h2 class = "smallFont"><u>How to Contact Us
+</u></h2> 
+            <p class = "smallFont">If you have any questions or concerns about reviewing and correcting your Information, please contact us by:
+
+</p><br/>
+            <p class = "smallFont">Mail:</p>
+            <p class = "smallFont">MAXIMUS Federal Services
+</p>
+            <p class = "smallFont">State Appeals East
+</p>
+            <p class = "smallFont">3750 Monroe Avenue, Suite 708
+</p>
+            <p class = "smallFont">Pittsford, NY 14534
+</p>
+            <p class = "smallFont">Fax:
+</p>
+            <p class = "smallFont">1-888-866-6190
+            </p><br/><br/>
+            <p class = "smallFont">If you have any questions or concerns about our privacy notice, please contact us by:
+</p>
+            <p class = "smallFont">Email:
+</p>
+            <p class = "smallFont">PrivacyOfficial@maximus.com
+</p>
+            <p class = "smallFont">Mail:
+</p>
+            <p class = "smallFont">MAXIMUS Privacy Official Office
+</p>
+            <p class = "smallFont">1891 Metro Center Drive
+</p>
+            <p class = "smallFont">Reston, VA 20190 USA
+            </p><br/>
+        </div>
+    </div>
+</aura:component>

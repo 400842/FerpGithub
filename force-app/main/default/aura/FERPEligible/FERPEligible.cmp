@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<div class="slds-card slds-border_around pagebody" >
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Helvetica; font-size: 26px">Am I Eligible</h1>
+            <p class = "smallFont">Consumers may request an external review from the HHS-Administered Federal External Review Process if:<br/><br/>
+                <ul class="overrideUL"> 
+                <li class="left30">You are enrolled in a municipal, local, county, state, or other type of governmental health plan, and your health plan selected to use the HHS-Administered Federal External Review Process for external review</li>
+                
+                <li class="left30">You are enrolled in an individual health insurance policy and your insurer selected to use the HHS-Administered Federal External Review Process. Consumers in some group health plans may also be eligible. Your plan's notice of external review rights should say if you are eligible.</li>
+                </ul> <p class="left20">OR</p><br />
+                <ul class="overrideUL"> 
+                <li class="left30">You are enrolled in an individual health insurance policy that uses the HHS-Administered Federal External Review Process for external review of compliance with the No Surprises Act's cost-sharing protections.</li>
+                </ul><br/>
+                Please read your adverse benefit determination (or claims denial) notice to find out if your plan or issuer has selected to use the HHS-Administered Federal External Review Process. The notice should also explain how to request an external review.<br/><br/>
+                If you cannot find this information in your adverse benefit determination, or you cannot find your adverse benefit determination, please call the member services phone number on your health plan ID card for help.</p>
+          </div>
+    </div>
+</aura:component>

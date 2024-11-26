@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Associate_Consultant_Total__c</fullName>
+    <formula>IF(ISNULL( Associate_Consultant_Hours__c ) ,  Associate_Consultant_Rate__c , Associate_Consultant_Hours__c  *  Associate_Consultant_Rate__c  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Associate Consultant Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

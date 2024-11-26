@@ -1,0 +1,381 @@
+<aura:component controller="CreateFerpCaseController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="boolCaseCreated" type="Boolean" default="false"/>
+ <!--   <aura:attribute name="fileUploadError" type="Boolean" default="false"/> -->
+    <aura:attribute name="isClaimModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="isClaimError" type="Boolean" default="false"/>
+    <aura:attribute name="disableActions" type="Boolean" default="false"/>
+    <aura:attribute name="hasErrorsOnPage" type="Boolean" default="false"/>
+    <aura:attribute name="claimErrorMsg" type="String"/>
+    <aura:attribute name="todayDate" type="String"/>
+    <aura:attribute name="caseIdDisplay" type="String"/>
+    <aura:attribute name="requiredMsg" type="String" default="This field is required."/>
+    <aura:attribute name="stateList" type="List" default="[]"/>
+    <aura:attribute name="entityList" type="List" default="[]"/>
+    <aura:attribute name="edata" type="Object" />
+    <aura:attribute name="filteredData" type="Object" />
+    <aura:attribute name="ecolumns" type="List" />
+    <aura:attribute name="selectedRows" type="object"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="1"/>	
+    <aura:attribute name="activeSections" type="List" default="['A','B','C','D','E','F','G','H']" />
+	<aura:attribute name="options" type="List" default="[
+    {'label': 'My claim was denied ( or partially denied, for example, my plan or issuer is not covering the cost of the claim at an in-network rate)', 'value': 'My claim was denied ( or partially denied, for example, my plan or issuer is not covering the cost of the claim at an in-network rate)'},
+    {'label': 'My request for prior authorization was denied (or partially denied)', 'value': 'My request for prior authorization was denied (or partially denied)'},
+    {'label': 'My coverage was retroactively cancelled (also known as a rescission of coverage)', 'value' : 'My coverage was retroactively cancelled (also known as a rescission of coverage)'},
+    {'label': 'Other', 'value' : 'Other'}
+    ]"/>
+    <aura:attribute name="caseId" type="String" default=""/>
+    <aura:attribute name="Program_Priority__c" type="String" default="Standard"/>
+    <aura:attribute name="value" type="String" default=""/>
+    <aura:attribute name="columns" type="List" />
+	<aura:attribute name="firstname" type="String" default=""/>
+    <aura:attribute name="isuploaded" type="String" default=""/>
+    <aura:attribute name="isHealthPlan" type="Boolean" default="false"/>
+    <aura:attribute name="duplicateClaim" type="Boolean" default="false"/>
+    <aura:attribute name="uploaded" type="List" default="[ {'label': 'Yes', 'value': 'Yes'},
+    {'label': 'No', 'value': 'No'} ]"/>
+    <aura:attribute name="isClaim" type="Boolean" default="false"/>
+    <aura:attribute name="showSelectedFile" type="boolean" default="false" />
+    <aura:attribute name="isClaimEdit" type="boolean" default="false" />
+    <aura:attribute name="claimEditRow" type="Integer" default=""/>
+    <aura:attribute name="filename" type="String" default="No File Selected.." />
+    <aura:attribute name="Claim" type="Map" default="{'id':0,
+                                                      'ClaimName':'',
+                                                      'Service_Start_Date':'',
+                                                      'Service_End_Date':''}"/>
+    <aura:attribute name="claimReq" type="FERPRequestClaimWrapper[]"/>
+    <aura:attribute name="ferpReq" type="Map" default="{'ClaimName':'',
+                                                        'Service_Start_Date':null,
+                                                        'Service_End_Date':null,
+                                                        'Requestor_First_Name':'',
+                                                        'Requestor_Middle_Name':'',
+                                                        'Requestor_Last_Name':'',
+                                                        'Requestor_Phone':'',
+                                                        'Requestor_State':'',
+                                                        'Requestor_Apt':'',
+                                                        'Requestor_City':'',
+                                                        'Requestor_County':'',
+                                                        'Requestor_Email':'',
+                                                        'Requestor_Fax':'',
+                                                        'Requestor_Street':'',
+                                                        'Requestor_Zip':'',
+                                                        'Age':'',
+                                                        'Claimant_Apt':'',
+                                                        'Claimant_City':'',
+                                                        'Claimant_County':'',
+                                                        'Claimant_Email':'',
+                                                        'Claimant_Fax':'',
+                                                        'Claimant_First_Name':'',
+                                                        'Claimant_Last_Name':'',
+                                                        'Claimant_Middle_Name':'',
+                                                        'Claimant_Phone':'',
+                                                        'Claimant_State':'',
+                                                        'Claimant_Street':'',
+                                                        'Claimant_Zip':'',
+                                                        'Health_Plan':'',
+                                                        'Health_Plan_Apt':'',
+                                                        'Health_Plan_City':'',
+                                                        'Health_Plan_Fax':'',
+                                                        'Health_Plan_Phone':'',
+                                                        'Health_Plan_State':'',
+                                                        'Health_Plan_Street':'',
+                                                        'Health_Plan_Zip':'',
+                                                        'Health_Plan_Entity_AddressId':'',
+                                                        'Health_Plan_Entity_Id':'',
+                                                        'Provider_ferp':'',
+                                                        'Denial_Reason':'',
+                                                        'Final_Denial_Date':'',
+                                                        'Denial_Notic_Attached':'',
+                                                        'Denial_Disagreement_Reason':'',
+                                                        'Expedite_Selected':false,
+                                                        'Expedite_Reason':'',
+                                                        'Policy_Holder_Apt':'',
+                                                        'Policy_Holder_City':'',
+                                                        'Policy_Holder_County':'',
+                                                        'Policy_Holder_Email':'',
+                                                        'Policy_Holder_Fax':'',
+                                                        'Policy_First_Name':'',
+                                                        'Policy_Holder_Insurance_ID':'',
+                                                        'Policy_Holder_Last_Name':'',
+                                                        'Policy_Holder_Middle_Name':'',
+                                                        'Policy_Holder_Phone':'',
+                                                        'Policy_Holder_State':'',
+                                                        'Policy_Holder_Street':'',
+                                                        'Policy_Holder_Zip':'',
+                                                        'Reason_for_Review' : ''}"/>
+    <!--handlers-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:if isTrue="{!!v.boolCaseCreated}">
+    <div class="slds-card">
+        <div class="slds-grid slds-wrap">
+           <div class="slds-size--4-of-4 slds-p-around_small">
+               <form class="slds-form--stacked">
+                   <h1 class="slds-text-heading_large">To ask for an external review, you must create a case here.</h1><br/>
+                   <div class="slds-box"><div class="slds-text-heading_small">Please complete the form below to request an external review.<br/>
+                       If you have any additional information to support your case, you can upload, mail, fax or email it to us within 10 business days of the initial submission.</div></div><br/><br/>
+                   <div class="slds-text-body_large" style="color:#a65500">All form fields are required except as noted.</div><br/>
+                   <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections }">
+                       <lightning:accordionSection name="A" label="Reason asking for review (choose one):">
+                            <lightning:radioGroup name="radioGroupRequired" 
+                            aura:id= "reqfield"
+                              options="{!v.options }"
+                              value="{!v.ferpReq.Reason_for_Review }"
+                              type="radio"
+                             required="true"
+                              onchange="{!c.handleChange }"/>
+                           
+                           <br/>
+                           <aura:if isTrue="{!v.isClaim}">
+                               <lightning:button variant = "brand" label = "Add Claim" title = "AddClaim" onclick = "{!c.AddClaim}"/>
+                               <aura:if isTrue="{!not(empty(v.claimReq))}">
+                               		<lightning:datatable keyField="id" data="{!v.claimReq}"
+                                 		columns="{!v.columns}"
+                                 		resizeColumnDisabled="true"
+                                 		hideCheckboxColumn="true" onrowaction="{!c.claimRowActions}"/>
+                               </aura:if>
+                           </aura:if>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="B" label="Person asking for review (This could be the person who received the denial, or his or her parent, legal guardian or authorized representative).">    
+                           <div class="slds-grid slds-wrap" id="reqContent">
+                            	<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="First Name" aura:id= "reqfield" name="requestorSectionFirstName" value="{!v.ferpReq.Requestor_First_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Middle Name (optional)" name="middleName" value="{!v.ferpReq.Requestor_Middle_Name}" />
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Last Name" name="requestorSectionLastname" aura:id= "reqfield" value="{!v.ferpReq.Requestor_Last_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}"/>          
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small"  type = "text" label="Street address/P.O.Box" name="requestorSectionStreet" value="{!v.ferpReq.Requestor_Street}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Apartment/Suite number (optional)" name="apt" value="{!v.ferpReq.Requestor_Apt}" />
+                                <div class="slds-large-size--2-of-6"></div>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="City" name="requestorSectionCity" value="{!v.ferpReq.Requestor_City}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:combobox class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" name="requestorSectionState" label="State" placeholder="Choose State" value="{!v.ferpReq.Requestor_State}" options="{!v.stateList}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type="text" maxlength="5"  label="Zip" name="requestorSectionZip" value="{!v.ferpReq.Requestor_Zip}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="County (optional)" name="county" value="{!v.ferpReq.Requestor_County}" />
+                                <div class="slds-large-size--2-of-6"></div><div class="slds-large-size--2-of-6"></div>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type="email" label="Email" name="requestorSectionEmail" value="{!v.ferpReq.Requestor_Email}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "tel" label="Phone" name="requestorSectionPhone" value="{!v.ferpReq.Requestor_Phone}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." required="true" messageWhenValueMissing="{!v.requiredMsg}"  aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "tel" label="Fax (optional)" name="requestorSectionFax" value="{!v.ferpReq.Requestor_Fax}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." />
+                          </div>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="C" label="Person denied benefits or coverage (This section is about the person who received or will receive the benefit or treatment)">
+                           <div class="slds-grid slds-wrap" id="claimantContent"> 
+                           		<lightning:input class= "slds-size--6-of-6" type="checkbox" aura:id = "Requestor" label="Check here if this is the person asking for a review" name="input1" onchange="{!c.RequestorasClaimant}"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="First Name" name="claimantSectionFirstName" value="{!v.ferpReq.Claimant_First_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Middle Name (optional)" name="claimantSectionMiddleName" value="{!v.ferpReq.Claimant_Middle_Name}" />
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Last Name" name="claimantSectioLastname" value="{!v.ferpReq.Claimant_Last_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>          
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Street address/P.O.Box" name="claimantSectionStreet" value="{!v.ferpReq.Claimant_Street}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Apartment/Suite number (optional)" name="apt" value="{!v.ferpReq.Claimant_Apt}" />
+                                <div class="slds-large-size--2-of-6"></div>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="City" name="claimantSectionCity" value="{!v.ferpReq.Claimant_City}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:combobox class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" name="claimantSectionState" label="State" placeholder="Choose State" value="{!v.ferpReq.Claimant_State}" options="{!v.stateList}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" maxlength="5" label="Zip" name="claimantSectionZip" value="{!v.ferpReq.Claimant_Zip}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="County (optional)" name="county" value="{!v.ferpReq.Claimant_County}" />
+                                <div class="slds-large-size--2-of-6"></div><div class="slds-large-size--2-of-6"></div>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Email" name="claimantSectionEmail" value="{!v.ferpReq.Claimant_Email}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "tel" label="Phone" name="claimantSectionPhone" value="{!v.ferpReq.Claimant_Phone}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Fax (optional)" name="fax" value="{!v.ferpReq.Claimant_Fax}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." />
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "number" label="Age" required="true" name="claimantSectionAge" messageWhenValueMissing="{!v.requiredMsg}" max="999" value="{!v.ferpReq.Age}" aura:id= "reqfield" />
+                           </div>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="D" label="Policy Holder (This section is about the person under whose name the coverage is issued)">
+                            <div class="slds-grid slds-wrap" id="pHolderContent"> 
+                           		<lightning:input class= "slds-size--6-of-6" aura:id = "Claimant" type="checkbox" label="Check here if this is the person denied benefits or coverage" name="input1" onchange="{!c.ClaimantasPolicy}"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="First Name" name="pHolderSectionFirstName" value="{!v.ferpReq.Policy_First_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Middle Name (optional)" name="middleName" value="{!v.ferpReq.Policy_Holder_Middle_Name}" />
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Last Name" name="pHolderSectionLastname" value="{!v.ferpReq.Policy_Holder_Last_Name}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>          
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Street address/P.O.Box" name="pHolderSectionStreet" value="{!v.ferpReq.Policy_Holder_Street}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Apartment/Suite number (optional)" name="apt" value="{!v.ferpReq.Policy_Holder_Apt}" />
+                                <div class="slds-large-size--2-of-6"></div>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="City" name="pHolderSectionCity" value="{!v.ferpReq.Policy_Holder_City}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:combobox class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" name="pHolderSectionState" label="State" placeholder="Choose State" value="{!v.ferpReq.Policy_Holder_State}" options="{!v.stateList}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" maxlength="5" label="Zip" name="pHolderSectionZip" value="{!v.ferpReq.Policy_Holder_Zip}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="County (optional)" name="county" value="{!v.ferpReq.Policy_Holder_County}" />
+                                <div class="slds-large-size--2-of-6"></div><div class="slds-large-size--2-of-6"></div>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Email" name="pHolderSectionEmail" value="{!v.ferpReq.Policy_Holder_Email}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "tel" label="Phone" name="pHolderSectionPhone" value="{!v.ferpReq.Policy_Holder_Phone}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           		<lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Fax (optional)" name="fax" value="{!v.ferpReq.Policy_Holder_Fax}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number." />
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Insurance ID" name="pHolderSectionInsurance" value="{!v.ferpReq.Policy_Holder_Insurance_ID}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           </div>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="E" label="Health Plan">
+                           <div class="slds-grid slds-wrap" >
+                               <div class="slds-size--4-of-12">
+                                   <lightning:input variant="label-inline" type = "text" name="policy" label="Policy Name" value="{!v.ferpReq.Health_Plan}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                               </div>
+                               <div class="slds-size--2-of-12"  style="margin-top:0.2%;margin-left:2%">
+                                   <lightning:button variant="brand" label="" title="Search" iconName="utility:search" iconPosition="left" onclick="{!c.handleClick}" />
+                               </div>
+                               <div class="slds-size--6-of-12"></div>
+
+                           </div>
+                           	   <div class="slds-grid slds-wrap" id="hPlanContent">
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Street address/P.O.Box" name="hPlanSectionStreet" value="{!v.ferpReq.Health_Plan_Street}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Apartment/Suite number (optional)" name="apt" value="{!v.ferpReq.Health_Plan_Apt}" />
+                               <div class="slds-large-size--2-of-6"></div>
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="City" name="hPlanSectionCity" value="{!v.ferpReq.Health_Plan_City}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                               <lightning:combobox class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" name="hPlanSectionState" label="State" placeholder="Choose State" value="{!v.ferpReq.Health_Plan_State}" options="{!v.stateList}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield" />
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Zip" maxlength="5" name="hPlanSectionZip" value="{!v.ferpReq.Health_Plan_Zip}" required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "tel" label="Phone" name="hPlanSectionPhone" value="{!v.ferpReq.Health_Plan_Phone}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number."  required="true" messageWhenValueMissing="{!v.requiredMsg}" aura:id= "reqfield"/>
+                           	   <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Fax (optional)" name="fax" value="{!v.ferpReq.Health_Plan_Fax}" pattern="[0-9]{10}"  messageWhenPatternMismatch="Please enter 10 digit phone number."  />
+                           </div>
+                           <!-- Start Of Searching for Health Plan Logic-->
+                           <aura:if isTrue="{!v.isHealthPlan}">
+                               <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                                   <div class="slds-modal__container">
+                                       
+                                       <header class="slds-modal__header">
+                                           <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"><p>Search Health Plan</p>
+                                           <!--<lightning:buttonIcon iconName="utility:close"
+                                                                 onclick="{! c.closeModel }"
+                                                                 alternativeText="close"
+                                                                 variant="brand"
+                                                                 class="slds-modal__close"/>-->
+                                           </h2>
+                                       </header>
+                                       
+                                       <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1"> 
+                                           <lightning:input class="slds-size--6-of-6 slds-large-size--3-of-6 slds-p-around_small" type = "search" onchange="{!c.searchTable}" label="Health Plan Name" aura:id = "searchBox" name="searchname" />
+                                           <div style="height: 400px">
+                                               <lightning:datatable   keyField="id"
+                                                                    data="{! v.filteredData }"
+                                                                    columns="{! v.ecolumns }"
+                                                                    hideCheckboxColumn="false"
+                                                                    maxRowSelection="{! v.maxRowSelection }"
+            														onrowselection="{! c.updateSelectedText }"/>   
+                                           </div>
+                                           
+                                       </div>
+                                       <!--Popup Footer Buttons-->             
+                                       <footer class="slds-modal__footer slds-modal__footer_directional">
+                                           <lightning:button variant = "neutral" label = "Cancel" title = "Cancel" onclick = "{!c.closeModel}"/>
+                                           <lightning:button variant = "brand" label = "Save" title = "Select" onclick = "{!c.addRecord}"/>
+                                       </footer>                                  
+                                   </div>            
+                               </section>
+                               <div class="slds-backdrop slds-backdrop_open"></div>       		
+                           </aura:if>
+                           <!-- End Of Searching for Health Plan Logic-->
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="F" label="Provider">
+                           <div class="slds-grid slds-wrap">
+                               <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Provider Name (optional)" name="provider" value="{!v.ferpReq.Provider_ferp}" />
+                           </div>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="G" label="Denial Information">
+                            <div class="slds-grid slds-wrap" id="denialInfoContent">
+                                <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" max="{!v.todayDate}" type = "date" label="Final Denial Notice Date(mm/dd/yyyy)" required="true" aura:id= "reqfield" name="provider" value="{!v.ferpReq.Final_Denial_Date}" /><br/><br/>
+                                <div class="slds-size--6-of-6 slds-text-heading_small" style="color:#a65500"><b>Please limit each response below to 500 characters or less.</b></div><br/><br/>
+                               <!--sruthi-->
+                                <lightning:input class= "slds-size--6-of-6" onchange="{!c.checkboxClicked}" type="checkbox" label="Click here if you believe the review should be expedited and provide the reason below." name="input1" checked="{!v.ferpReq.Expedite_Selected}"/>
+                                <lightning:textarea class= "slds-size--6-of-6" name="denialInfoSectioninput1" label="Tell us the reason for the expedition" value="{!v.ferpReq.Expedite_Reason}" maxlength="500" />
+                                <lightning:textarea class= "slds-size--6-of-6" name="denialInfoSectioninput2" label="Tell us the reason for the denial" maxlength="500"  value="{!v.ferpReq.Denial_Reason}" />
+                                <lightning:textarea class= "slds-size--6-of-6" name="denialInfoSectioninput3" label="Tell us why you disagree with the denial" maxlength="500"  value="{!v.ferpReq.Denial_Disagreement_Reason}" />
+                              
+                           </div>
+                       </lightning:accordionSection>
+                       <lightning:accordionSection name="H" label="Attach Document">
+                            <div class="slds-box"><div class="slds-form-element__label">You may submit documents to support your case such as the denial letter or a letter from your doctor.<br/>
+                     		If you have more information that you want the reviewer to consider, you must mail or fax it to us by 10 business days after you file your request for review.</div></div><br/><br/>
+                           <div class="slds-form-element__label">All files must be uploaded in PDF format, and must be less than 100MB in size.<br/>
+                               Files over 100MB should be split into smaller files and uploaded separately.</div><br/>
+                           
+                           <!--File uploader cmponent -->
+                           <c:uploadFileCmp aura:id="fileUploader" onfileuploadsuccess="{!c.handleUploadSuccess}" />
+
+                           
+                           
+                           <!--<lightning:input type="file" name="file" aura:id="fileId" accept=".pdf, .doc, .docx" multiple = "true" onchange="{!c.handlefileschange}"/><br/>
+                           <aura:if isTrue="{!v.showSelectedFile}">
+                            <div class="selectedFile">
+                                    
+                                    <span class="docFileName slds-p-top_medium">{!v.filename}</span> &nbsp; &nbsp;
+                                	<span>
+                                        <button class="slds-button" onclick="{!c.Clearfiles}">
+                                        	<lightning:icon class="iconcolor" iconName="utility:close" size="x-small"
+                                            	alternativeText="cancel" title="cancel"></lightning:icon>
+                                        </button>
+                                    </span>
+                                
+                            </div>
+                       		 </aura:if>-->
+                           <lightning:radioGroup name="radioGroupRequired1" 
+                              options="{!v.uploaded }"
+                              aura:id= "reqfield"
+                              label="Have you uploaded the final denial notice?"     
+                              value="{!v.ferpReq.Denial_Notic_Attached }"
+                              type="radio"
+                              required="true"                
+                              onchange="{!c.handleUploadChange }"/><br/>
+                                 <!--  <aura:if isTrue="{!v.fileUploadError}">
+                                 		<div style="color: red;font-weight: bold;font-size:14px;"> Please upload the document. </div>    
+        </aura:if>-->
+                               <div class="slds-form-element__label">If an authorized representative is completing this request, then Appointment of Representative Form must be completed, signed and uploaded.<br/>
+                               <br/>By clicking submit and sending your external review request you are consenting to the release of medical records. You also attest that the information provided in this application is true and accurate to the best of your knowledge and authorize your insurance company and health care providers to release all relevant medical or treatment records to MAXIMUS Federal Services. MAXIMUS Federal Services will use this information to make a determination on your external appeal and that the information will be kept confidential and not be released to anyone else. This release is valid for one year.</div><br/>
+                       </lightning:accordionSection>
+                   </lightning:accordion>
+                </form>
+            </div> 
+        </div>
+    </div><br/>
+    <aura:if isTrue="{!v.hasErrorsOnPage}">
+                        		<div style="text-align: center;color: red;font-weight: bold;font-size:14px;"> Please fill all the required fields. </div>
+                    		</aura:if>
+       <!--  <aura:if isTrue="{!v.fileUploadError}">
+                                 		<div style="text-align: center;color: red;font-weight: bold;font-size:14px;"> Please upload the document. </div>    
+        </aura:if>-->
+    <lightning:button name="Save" label="Submit" variant="brand" onclick="{!c.handlesubmit}"  disabled="{!v.disableActions}"/>
+    <lightning:button name="Cancel" label="Cancel" variant="neutral" onclick="{!c.handlecancel}" disabled="{!v.disableActions}" />
+
+</aura:if>
+<aura:if isTrue="{!v.boolCaseCreated}">
+    <p>
+        <b>You have successfully submitted your case. You can click "Save as PDF" or "Print" below to save a copy of your external review request for your records.</b>
+        <br/>
+        please use case ID <b>{!v.caseIdDisplay}</b> to check case status.
+    </p>
+    <div style="margin-top:30px;">
+        <lightning:button name="Print" label="Print This Page" variant="brand" onclick="{!c.handlePrint}"/>
+        <lightning:button name="pdf" label="Save as PDF" iconName="utility:new_window" iconPosition="right" variant="brand" onclick="{!c.handlePrint}"/>
+    </div>  
+</aura:if>
+   
+    
+    
+    <aura:if isTrue="{!v.isClaimModalOpen}">
+             
+            <!-- Modal/Popup Box starts here-->
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <!-- Modal/Popup Box Header Starts here-->
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeClaimModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add Claim</h2>
+                    </header>
+                    <!--Modal/Popup Box Body Starts here-->
+                    	<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <aura:if isTrue="{!v.isClaimError}">
+                        		<div style="text-align: center;color: red;font-weight: bold;font-size:14px;"> {!v.claimErrorMsg} </div>
+                    		</aura:if>
+                            <aura:if isTrue="{!v.duplicateClaim}">
+                        		<div style="text-align: center;color: red;font-weight: bold;font-size:14px;"> Duplicate Claim. </div>
+                    		</aura:if>
+                            <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "text" label="Claim" name="claim" aura:id= "reqfield1" value="{!v.Claim.ClaimName}" required="true" messageWhenValueMissing="{!v.requiredMsg}"/>
+                            <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "date" label="Start Date of Service" name="date1" aura:id= "reqfield1" value="{!v.Claim.Service_Start_Date}" required="true" messageWhenValueMissing="{!v.requiredMsg}"/>
+                            <lightning:input class="slds-size--6-of-6 slds-large-size--2-of-6 slds-p-around_small" type = "date" label="End Date of Service" name="date2" aura:id= "reqfield1" value="{!v.Claim.Service_End_Date}" required="true" messageWhenValueMissing="{!v.requiredMsg}"/>
+                    	</div>
+                        
+                    <!--Modal/Popup Box Footer Starts here-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeClaimModel }"/>
+                        <lightning:button variant="brand"
+                                          label="Save"
+                                          title="Save"
+                                          onclick="{!c.saveClaimDetails}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+</aura:component>

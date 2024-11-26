@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "d601cc52-69f2-473a-b2af-d96268cff505",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "CheckCase__c",
+  "id" : "8aa1a251-82cc-4126-9742-d51790d752b6",
+  "label" : "CheckCase",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-checkcase",
+  "type" : "route",
+  "urlPrefix" : "checkcase"
+}

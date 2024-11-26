@@ -1,0 +1,205 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	   <div class="slds-card slds-border_around">
+           <br/>
+        <div class="slds-card__body slds-card__body_inner">
+            <h2 style="font-family: Helvetica; font-size: 26px">General FAQs</h2>
+            <h3 class = "smallFont fontW400">1. What is the HHS-Administered Federal External Review Process (FERP)?</h3>
+            <p class = "smallFont">The External Review Process gives you the right to an independent, third-party review when your health insurance plan denies care or refuses to pay for all or some of the care you already received. Under the Affordable Care Act, health insurance issuers not subject to a State external review process may choose either: the HHS-Administered Federal External Review Process, or they may contract with accredited Independent Review Organizations (IROs) to review external appeals on their behalf. Refer to section 'General Overview of the HHS-Administered Federal External Review Process' at <a href="https://www.cms.gov/CCIIO/Programs-and-Initiatives/Consumer-Support-and-Information/csg-ext-appeals-facts.html" style="color:blue">https://www.cms.gov/CCIIO/Programs-and-Initiatives/Consumer-Support-and-Information/csg-ext-appeals-facts.html</a>
+ </p><br/><br/>
+            
+            <h3 class = "smallFont fontW400">2. What type of health plans can participate in the HHS-Administered Federal External Review Process?</h3>
+            <p class = "smallFont">The HHS-Administered Federal External Review Process is available to consumers in the individual market or fully-insured small group or large group health insurance markets in a State (or Territory) that does not have an applicable State process that meets Federal standards for external review.</p><br/>
+            <p class = "smallFont">Health plans not subject to a State's external review process in the States with laws that do not meet minimum consumer protections in their external review process may choose either:</p>
+            <ul class="overrideUL"><li class = "smallFont left15">to enroll in the HHS-Administered Federal External Review Process, or</li>
+            <li class = "smallFont left15">to privately contract with accredited Independent Review Organizations (IROs) to review external appeals for their members.</li><br/>
+        </ul> <p class = "smallFont">Self-insured plans subject to ERISA and/or the Internal Revenue Code must use private contracts with accredited IROs to conduct external reviews on their behalf.</p><br/>
+            <p class = "smallFont">Self-insured church plans must use private contracts with accredited IROs to conduct external reviews on their behalf.</p><br/>
+            <!--B-08284 Added Custom Label for url difference between sandbox Owner:Sugam-->
+             <p class = "smallFont">Please visit: <a style="color:blue" href="https://www.cms.gov/CCIIO/Resources/Files/external_appeals.html">https://www.cms.gov/CCIIO/Resources/Files/external_appeals.html</a></p><br/>
+            <br/>
+            <h3 class = "smallFont fontW400">3. How will consumers know what health plans are required to follow which rules in a particular State?</h3>
+            <p class = "smallFont">Consumers may refer to the CCIIO website to identify whether issuers in their state are required to follow the process determined by the State or participate in a Federally-administered external review process. Please visit: <a style="color:blue" href="https://www.cms.gov/CCIIO/Resources/Files/external_appeals.html">https://www.cms.gov/CCIIO/Resources/Files/external_appeals.html</a>.</p>
+            <br/><p class = "smallFont">If an issuer is participating in a Federally-administered external review process, the consumer may ask their issuer if they are participating in either the HHS-Administered Federal External Review Process or they have privately contracted with Independent Review Organizations (IROs) to provide an external review process to their members. In addition, adverse benefit determinations and final adverse benefit determinations will direct consumers to the applicable external review process.</p>
+            <br/><p class = "smallFont">If a consumer is unable to find this information in your adverse benefit determination, or you cannot find your adverse benefit determination, please call the member services phone number on your health plan ID card for help.</p>
+            <br/><br/>
+            <h3 class = "smallFont fontW400">4. Who can request an external review?</h3>
+            <p class = "smallFont">Please read your adverse benefit determination (or claims denial) notice to find out if your plan or issuer has selected to use the HHS-Administered Federal External Review Process. It should also explain how to request an external review.</p>
+            <br/><p class = "smallFont">If you cannot find this information in your adverse benefit determination, or you cannot find your adverse benefit determination, please call the member services phone number on your health plan ID card for help.</p>
+            <br/><br/>
+            <h3 class = "smallFont fontW400">5. Who will enforce the external review decisions made in the HHS-Administered Federal External Review Process?</h3>
+            <p class = "smallFont">Complaints about or concerns with the HHS-Administered Federal External Review Process should be made to the U.S. Department of Health and Human Services, Center for Medicaid &amp; Medicaid Services, Center for Consumer Information and Insurance Oversight at <a style="color:blue">externalappeals@cms.hhs.gov</a>.</p>
+            <br/><br/>
+            <h3 class = "smallFont fontW400">6. How much does an external review cost under the HHS-Administered Federal External Review Process?</h3>
+            <p class = "smallFont">There is no cost to you or the insurer.</p>
+            <br/><br/>
+            <h3 class = "smallFont fontW400">7. Who operates the HHS-Administered Federal External Review Process?</h3>
+            <p class = "smallFont">MAXIMUS Federal Services, Inc. was selected as the independent, third party reviewer to operate the HHS-Administered Federal External Review Process.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">8. Who conducts the external review?</p>
+            <p class = "smallFont">MAXIMUS has a group of experts, including lawyers, doctors, nurses and other consultants, who conduct the external review.
+</p>
+            
+<br/><br/>
+            <p class = "smallFont fontW400">9. Does MAXIMUS have the authority to make determinations of whether an applicant has committed fraud or intentionally misrepresented a material fact?
+</p>
+            <p class = "smallFont">Yes, if enough information is available to support that finding. MAXIMUS will make a determination regarding whether a rescission was appropriate based on the record provided for the external review.
+</p>
+<br/> <br/>
+            <p class = "smallFont fontW400">10. Does MAXIMUS provide a no conflict of interest statement for each appeal case?
+</p>
+            <p class = "smallFont">Yes. Moreover, MAXIMUS Federal Services does not provide any services to or contract with any health, indemnity, disability insurer or any health care provider or facility that would pose a conflict of interest with services we are providing the Federal government under the HHS-Administered Federal External Review Process. In addition, MAXIMUS Federal Services does not provide any external review service, technology assessment service or consulting service for any health, indemnity, disability insurer or any health care provider or facility that would or could be perceived to conflict with our function under the HHS-Administered Federal External Review Process.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">11. Can you explain in more detail about the process and standards for the review of rescissions?
+</p>
+            <p class = "smallFont">Rescissions are treated similarly to other appeal cases in which qualified reviewers conduct an external review and render a final decision. In the HHS-Administered Federal External Review Process, the HHS contractor, MAXIMUS, will review appeals of alleged rescissions of coverage to determine whether the plan action complies with applicable statutory and regulatory requirements limiting rescissions to a narrow range of instances, such as cases of fraud and of intentional misrepresentation of material fact. The reviews will be conducted and completed within the standard review timeline.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">12. Where can I get more information about the HHS-Administered Federal External Review Process?
+</p>
+            <p class = "smallFont">You can get more information here: <a href="https://www.cms.gov/CCIIO/Programs-and-Initiatives/Consumer-Support-and-Information/External-Appeals.html" style="color:blue">https://www.cms.gov/CCIIO/Programs-and-Initiatives/Consumer-Support-and-Information/External-Appeals.html</a></p>
+            <br/><br/>
+            <p class = "smallFont fontW400">13. How does a State submit a NSA Referral to Maximus?
+</p>
+            <p class = "smallFont">Please click this <a href="https://externalappeal.cms.gov/ferpportal/public/docs/MOVEit-FERP_NSA_Reviews.pdf" style="color:blue">link</a> for the instructions on how to create a MOVEit account.</p>
+            
+            <br/><br/>
+            <h2 style="font-family: Helvetica; font-size: 26px">Claimant FAQs</h2>
+            <br/>
+            <p class = "smallFont fontW400">1. Is health plan election information (the HHS-Administered Federal External Review Process or the accredited IRO process) publicly available?
+</p>
+            <p class = "smallFont">At this time, election information is not posted on the CMS website.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">2. When can I request an external review?
+</p>
+            <p class = "smallFont">A consumer (or authorized representative) must request an external review within 4 months of receiving a final internal adverse benefit determination notice from their health plan or issuer. Normally, a consumer is required to complete the Health Plan's internal review process prior to requesting external review. However, in urgent situations, as described in question 12 below, a consumer may request an external review prior to completing the internal review process.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">3. Can a provider submit an external appeal on its own behalf?
+</p>
+            <p class = "smallFont">No. A provider may not submit an external appeal directly, but may serve as an authorized representative for a patient.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">4. Are denials of pharmacy benefits subject to external review?
+</p>
+            <p class = "smallFont">Yes, denials of medical and pharmacy benefits by group health plans and health insurance issuers offering group and individual health insurance coverage are subject to external review. Even if a pharmaceutical benefit is obtained via a stand-alone pharmacy plan, denials of benefits may be appealed. Benefits from stand-alone dental and vision plans, like other excepted benefits, are not subject to external review. However, if dental or vision benefits are included in a health plan, then denials of these benefits are subject to review. Under § 156.122(c), consumers enrolled in a qualified health plan through an Exchange can also request coverage of a drug that is not on their plan's formulary through the formulary exceptions process.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">5. My plan does participate in the HHS-Administered Federal External Review Process, how do I initiate a request?
+</p>
+            <p class = "smallFont">A request can be initiated by the Claimant or an Authorized Representative. If an Authorized Representative is making the request, then the Claimant and Authorized Representative must complete and sign the <a style="color:blue" href="{!$Label.c.Community_Start_URL+'/forms'}">Appointment of Representative Form</a> .</p>
+            <br/>
+            <p class = "smallFont left15">  1. Submit Online Request, click <a href="{!$Label.c.Community_Start_URL+'/casecreatedemo'}" style="color:blue" >Request an External Review</a></p><br />
+                <p class = "smallFont left15"> 2. Mail a request directly to MAXIMUS: </p>
+                
+                <p class = "smallFont left15">MAXIMUS Federal Services<br />
+                                              State Appeals East<br />
+                                              3750 Monroe Avenue, Suite 708<br />
+                                              Pittsford, NY 14534</p><br />
+                
+                <p class = "smallFont left15"> 3. Fax a request to: 1-888-866-6190</p><br />
+            <br />
+            <p class = "smallFont fontW400">6. Can I ask for an external review by phone?
+</p>
+            <p class = "smallFont">Only requests for expedited (fast) external review can be made by phone. Standard requests must be submitted online through the portal, or in writing via mail or fax.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">7. How long does it take MAXIMUS to make an external review decision for the HHS-Administered Federal External Review Process?
+</p>
+            <p class = "smallFont">For a standard external review, the MAXIMUS reviewer must give you written notice of the decision as soon as possible, but no more than 45 days after the reviewer receives your request for an external review.</p>
+            <br/><p class = "smallFont">For an expedited external review, the MAXIMUS reviewer must give you and the health plan the decision as quickly as medical circumstances require, but no more than 72 hours of receiving your request. The reviewer can give you an oral decision but must follow up in writing within 48 hours.</p>
+            <br/><p class = "smallFont">These timelines are different if a consumer is requesting external review of a denial for a non-formulary drug. Depending on the urgency of the case, MAXIMUS will give an oral decision within 24 or 72 hours. MAXIMUS will then send a written decision within 48 hours.
+</p><br/>
+<br/>
+            <p class = "smallFont fontW400">8. How is "urgent" defined?
+</p>
+            <p class = "smallFont">The term "urgent" is used in 29 CFR 2560.503-1(m) (1) and describes certain situations in which an issuer must provide expedited processing of claims and internal appeals. For purposes of claims and internal appeals, an "urgent" claim is a claim involving medical care or treatment in which, in the opinion of the attending health care provider, the application of the time period for making non-urgent determinations:</p>
+            <ul class="overrideUL"> <li class = "smallFont left15">Could seriously jeopardize the life or health of the claimant or the ability of the claimant to regain maximum function, or
+</li>
+          <li class = "smallFont left15">Would subject the claimant to severe pain that cannot be adequately managed without the care or treatment that is the subject of the claim.
+</li> </ul> 
+            <br/>
+            <p class = "smallFont">For external review purposes, 45 CFR 147.136(d) (2)(ii) references situations in which a claimant has a right to an expedited external review. These situations are:
+</p><ul class="overrideUL">
+<li class = "smallFont left15">When an adverse benefit determination involves a medical condition of the claimant for which the timeframe for completion of an expedited internal appeal would seriously jeopardize the life or health of the claimant or the ability of the claimant to regain maximum function,
+</li>
+            <li class = "smallFont left15">When a final internal adverse benefit determination involves a medical condition of the claimant for which the timeframe for completion of an expedited internal appeal would seriously jeopardize the life or health of the claimant or the ability of the claimant to regain maximum function, or
+</li>
+<li class = "smallFont left15">When a final internal adverse benefit determination concerns the admission, availability of care, continued stay or health care service for which the claimant received emergency services but has not yet been discharged from a facility.
+</li></ul>
+<br/><br/>
+            <p class = "smallFont fontW400">9. What is the definition of "immediately" in the following sentence: "Upon receipt of a final external review decision reversing the adverse benefit determination (ABD) or final internal ABD, the plan or issuer must immediately provide coverage or payment of the claim."
+</p>
+            <p class = "smallFont">Once a final external review decision is made that reverses the ABD, the plan or issuer must provide the benefits or make payment on the claim without delay and in a reasonable amount of time considering any medically exigent circumstances, regardless of whether the plan or issuer intends to seek judicial review of the external review decision and unless and until there is a judicial decision otherwise.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">10. I understand that a decision is binding but if the plan disagrees with a decision, how does it provide feedback for future cases?
+</p>
+            <p class = "smallFont">Health plans and issuers may provide feedback to CMS at: <a style="color:blue">externalappeals@cms.hhs.gov</a>
+</p>
+<br/> <br/>
+            <p class = "smallFont fontW400">11. Can a health plan compel consumers to undergo external review before filing a lawsuit?
+</p>
+            <p class = "smallFont">There is no requirement under the federal regulations that requires a consumer to pursue external review before filing a lawsuit. However, State law may place requirements on consumers.
+</p>
+<br/> <br/>
+            <p class = "smallFont fontW400">12. Are there times when I can request a simultaneous internal appeal and external review?
+</p>
+            <p class = "smallFont">Yes, you may request a simultaneous internal appeal and external review:
+</p><ul class="overrideUL">
+            <li class = "smallFont left15">When an adverse benefit determination involves a medical condition of the claimant for which the timeframe for completion of an expedited internal appeal would seriously jeopardize the life or health of the claimant or the ability of the claimant to regain maximum function
+</li>
+            <li class = "smallFont left15">When a final internal adverse benefit determination involves a medical condition of the claimant for which the timeframe for completion of an expedited internal appeal would seriously jeopardize the life or health of the claimant or the ability of the claimant to regain maximum function, or
+</li>
+            <li class = "smallFont left15">When a final internal adverse benefit determination concerns the admission, availability of care, continued stay or health care service for which the claimant received emergency services but has not yet been discharged from a facility.
+</li></ul>
+       <br/><br/>
+            <h2 style="font-family: Helvetica; font-size: 26px">Health Plan and Issuers FAQs
+</h2><br/>
+            <p class = "smallFont fontW400">1. If a health insurance issuer or self-insured non-Federal governmental plan has not yet submitted their election to use a federal external review process, can they still do so at this time?
+</p>
+            <p class = "smallFont">Yes. <br/> 
+                <br/>
+                All health insurance issuers in States without a State external review process that meets Federal standards and self-insured non-Federal governmental plans must submit information regarding their election to use either the HHS-Administered Federal External Review Process or to privately contracts with IROs. This information must be submitted via the Health Insurance Oversight System (HIOS). Instructions on how to elect can be found here:<br />
+                <br/>
+                <a style="color:blue" href="https://www.cms.gov/CCIIO/Resources/Regulations-and-Guidance/Downloads/HHS-SRG-on-HIOS-elections_-FINAL.pdf">https://www.cms.gov/CCIIO/Resources/Regulations-and-Guidance/Downloads/HHS-SRG-on-HIOS-elections_-FINAL.pdf</a>
+            </p>
+            <br/>
+            <p class = "smallFont">Self-insured non-Federal governmental plans and health insurance issuers may switch their election at any time, but must notify CMS in advance of their decision to switch their election. CMS should be notified of an election, or a change of election via HIOS.</p>
+            <br/>
+            <p class = "smallFont">Plans and issuers electing the HHS-Administered Federal External Review Process must include certain contact information in their election, such as:
+            </p>
+            
+            <ul class="overrideUL">
+            <li class = "smallFont left15">contact information for designated personnel in their appeals department, including name(s), mailing address(es), telephone number(s), facsimile number(s), electronic mail address(es), and
+</li>
+             <li class = "smallFont left15">contact information to be used for expedited cases outside of normal business hours (including nights, weekends, and holidays).
+            </li></ul><br/>
+            <p class = "smallFont">Self-insured non-Federal governmental plans should also include contact information for the plan administrator, including name, mailing address, telephone number, facsimile number, and electronic mail address.
+</p>
+            <br/>
+            <p class = "smallFont">Plans and issuers must immediately report any changes to the information submitted during the initial election to CMS via HIOS.
+</p>
+            <br/><br/>
+            <p class = "smallFont fontW400">2. For plans or issuers that have transitioned from some other external review process to the HHS-Administered Federal External Review Process (or vice versa), how can a plan or issuer determine which external review process applies to a given claim?
+</p>
+            <p class = "smallFont">The applicable external review process for any particular claim is based on the external review process applicable to the plan or issuer at the time a final internal adverse benefit determination (or in the case of simultaneous internal appeals and external review, the adverse benefit determination) is provided to the patient and/or claimant. As such, adverse benefit determinations or final internal adverse benefit determinations should direct a patient/claimant to the applicable external review process.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">3. Can health plans use the same independent reviewer organization for determining an internal appeal and an external review request?
+</p>
+            <p class = "smallFont">No, 45 CFR 147.136(d) outlines the requirements for the federal external review process, including the requirement that there be a process for approving IROs eligible to be assigned to conduct external review and a process for random assignment of external reviews to IROs. In general, the Departments require that the IRO have no conflicts of interest that will influence its independence.
+</p>
+<br/><br/>
+            <p class = "smallFont fontW400">4. Can an issuer or plan use both the HHS-Administered Federal External Review Process and the private accredited IRO process, sending members to different processes based upon internal criteria?
+</p>
+            <p class = "smallFont">No. An issuer or plan must make an election of either the HHS-Administered Federal External Review Process or the private accredited IRO process. Issuers and plans cannot utilize both processes simultaneously.
+</p>
+            
+        </div>
+    </div>
+    
+</aura:component>

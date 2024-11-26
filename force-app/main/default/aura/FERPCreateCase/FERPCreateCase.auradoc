@@ -1,0 +1,8 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		Created by Pragnya Butreddy
+        Created On 10.14.2020 (for FERP Demo.)
+        This component is used to create cases from portal along with document upload functionality.     
+	</aura:example>
+</aura:documentation>

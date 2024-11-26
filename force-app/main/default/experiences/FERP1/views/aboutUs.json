@@ -1,0 +1,54 @@
+{
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "e7b13065-947f-4e36-ba7e-4eb968e11614",
+  "label" : "About Us",
+  "regions" : [ {
+    "id" : "b478905d-9010-47a9-aef3-d9dfa917c4f5",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FERPAboutUs",
+      "id" : "ffcc494d-d82f-49a6-b338-c16f8616598f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "85cb3773-a9fd-45ef-a8d1-632f2aea0eb6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FERPFooter",
+      "id" : "d0412e5e-e3a9-43d9-8f2a-43a8cf274836",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9fa1fdfb-a982-4ef2-98af-9e7af02e099a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "About Us"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a7d0c076-f4c7-48dc-817f-c2e6548a6f6e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7c7d988a-f685-4825-8c81-c25ac0d356d7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "l2fAEBy1kBFQ9txx3EY48SYVfgJD8u",
+  "type" : "view",
+  "viewType" : "custom-about-us"
+}

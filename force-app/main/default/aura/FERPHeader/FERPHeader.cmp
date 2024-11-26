@@ -1,0 +1,96 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="IsnavOpen" type="boolean" default="false"/>
+    <aura:attribute name="homeClasss" type="String" default="yellowText"/>
+    <aura:attribute name="eligibleClass" type="String" default="whiteText"/>
+    <aura:attribute name="extRevClass" type="String" default="whiteText"/>
+    <aura:attribute name="reqRevClass" type="String" default="whiteText"/>
+    <aura:attribute name="checkCaseClass" type="String" default="whiteText"/>
+    <aura:attribute name="formClass" type="String" default="whiteText"/>
+    <aura:attribute name="faqClass" type="String" default="whiteText"/>
+    <aura:attribute name="resourceClass" type="String" default="whiteText"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <div class = "slds-grid slds-grid_vertical">
+       <div class ="slds-col slds-p-around_none">
+        <div class="slds-box firstblock">
+            
+        </div>
+       </div>
+       <div class ="slds-col slds-p-around_none">
+        <div class = "slds-box secondblock">
+           <p style="text-align: center;font-size: 28px; font-family: Helvetica; color: white">HHS-Administered Federal External Review Process</p>
+        </div>
+       </div>
+       <div class = "slds-col slds-p-around_none">
+       	<div class = "slds-box thirdblock">
+       		 <div class ="slds-grid">                 
+            	<div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <!--B-08284 Added Custom Label for url difference between sandbox Owner:Sugam-->
+                	<a href="{!$Label.c.Community_Start_URL}" class="{!v.homeClasss}">Home</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/eligible'}" class="{!v.eligibleClass}">Am I Eligible</a>
+
+                    <!--<a href="/s/eligible" class="{!v.eligibleClass}">Am I Eligible</a>-->
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/external-reviews'}" class="{!v.extRevClass}">External Reviews</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/requestreview'}" class="{!v.reqRevClass}">Request a Review Online</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/checkcase'}" class="{!v.checkCaseClass}">Check Case Status</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/forms'}" class="{!v.formClass}">Forms</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/faq'}" class="{!v.faqClass}">FAQs</a>
+                </div>
+                <div class="slds-col slds-show_large slds-p-horizontal_small">
+                    <a href="{!$Label.c.Community_Start_URL+'/resources'}" class="{!v.resourceClass}">Resources</a>
+                </div>
+                <div class="slds-col slds-hide_large">
+                	<div onclick = "{!c.openNav}">
+                        <span class="slds-avatar slds-avatar--medium"><a><img src="{!$Resource.NavLogo}"/></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+    
+    <aura:if isTrue="{!v.IsnavOpen}">
+        
+        <nav class="slds-nav-vertical slds-nav-vertical_compact" aria-label="Sub page">
+            <div class="slds-nav-vertical__section">
+              <ul aria-describedby="entity-header">
+                <li class="slds-nav-vertical__item slds-is-active">
+                  <a href="{!$Label.c.Community_Start_URL}" class="slds-nav-vertical__action" aria-current="true">Home</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/eligible'}" class="slds-nav-vertical__action">Am I Eligible</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/external-reviews'}" class="slds-nav-vertical__action">External Reviews</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/requestreview'}">Request a Review Online</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/checkcase'}">Check Case Status</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/forms'}">Forms</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/faq'}">FAQs</a>
+                </li>
+                <li class="slds-nav-vertical__item">
+                  <a href="{!$Label.c.Community_Start_URL+'/resources'}">Resources</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    </aura:if>
+</aura:component>

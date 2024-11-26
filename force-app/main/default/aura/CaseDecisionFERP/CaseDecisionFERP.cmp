@@ -1,0 +1,22 @@
+<aura:component controller="CasedisputeController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Caseinfo" type="Case" />
+    <aura:attribute name="specialtyList" type="List" />
+    <aura:attribute name="requestSelected" type="List" default="[]" />
+    <aura:attribute name="requestedSpecialty" type="String" />
+    <aura:attribute name="isPanelReviewRequired" type="Boolean" default="false" />
+    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Case"  onsuccess="{!c.handleSuccess}">
+        <div class="slds-box">
+            <lightning:inputField fieldName="Decision_Code__c" />                     
+            <lightning:inputField fieldName="Case_Decision_Date__c" />                       
+            <lightning:inputField fieldName="Date_Letter_Sent__c" />
+            
+               
+        </div>
+        <div class="slds-align_absolute-center slds-p-top_small">                  
+            <lightning:button variant="brand" type="submit" label="Save" />
+        </div>
+    </lightning:recordEditForm>
+    
+</aura:component>

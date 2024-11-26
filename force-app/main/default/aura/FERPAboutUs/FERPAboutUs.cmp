@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<div class="slds-card">
+    	<div class="slds-grid slds-wrap">
+            <div class="slds-size--1-of-1">
+                <div class="slds-p-around_small">
+                	<h1 class="slds-text-heading_medium" style="color:rgb(131, 111, 23)">About Us</h1>  
+                </div>
+            </div>
+            <div class="slds-size--4-of-4 slds-medium-size--3-of-4">
+                <div class="slds-p-around_small">
+                    <p style = "font-family: Helvetica; font-size: 14px">MAXIMUS Federal Service conducts independent reviews of appeals of denied health insurance claims.<br/><br/>
+                        The U.S. Office of Personnel Management (OPM) and the U.S. Department of Health and Human Services (HHS) contracted with us to operate the HHS-Administered Federal External Review Process.<br/><br/>
+                        MAXIMUS Federal Services, Inc. does external reviews for:<br/><br/>
+                        <ul class="overrideUL"> 
+                    <li>Health plans that choose the HHS-Administered Federal External Review Process</li>
+                        <li>Consumers whose plans participate in the HHS-Administered Federal External Review Process</li>
+                        </ul><br/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-size--4-of-4 slds-medium-size--1-of-4">
+                <img src="{!$Resource.FERPAboutUs}"/> 
+            </div>
+            <div class="slds-size--1-of-1">
+                <div class="slds-p-around_small">
+            		<p style = "font-family: Helvetica; font-size: 14px">We review denials to see if the plan made the right decision. We work for OPM and HHS, not the health plan or the health insurance company. Our job is to be fair and independent. There is no cost to health plans or consumers for our services.<br/><br/>
+                        We use a staff of experts for the external reviews. Our full-time, on-site Appeal Officers include examiners who are health attorneys, nurses, public health experts, and medical technicians. We also consult with doctors and practitioners in every medical specialty.<br/><br/>
+                        MAXIMUS Federal Services is part of MAXIMUS, a company that provides services to government agencies. MAXIMUS clients include the Federal government, many state agencies, and city and county-level organizations. The MAXIMUS mission is "Helping Government Serve the People."<br/><br/>
+                        <b><u>Conflict of Interest Statement</u></b><br/>
+                    	MAXIMUS Federal Services does not provide any services to or contract with any health, indemnity, disability insurer or any health care provider or facility that would pose a conflict of interest with services we are providing the Federal government under the HHS-Administered Federal External Review Process. In addition, MAXIMUS Federal Services does not provide any external review service, technology assessment service or consulting service for any health, indemnity, disability insurer or any health care provider or facility that would or could be perceived to conflict with our function under the HHS-Administered Federal External Review Process.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

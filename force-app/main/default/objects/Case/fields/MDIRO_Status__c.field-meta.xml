@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDIRO_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Status , 
+&apos;Draft&apos;, &apos;Draft&apos;, 
+&apos;Initiated&apos;, &apos;Pending MCO Case File Upload&apos;,
+&apos;Case Preparation&apos;,&apos;In Review&apos;,
+&apos;Panel Review&apos;,&apos;In Review&apos;,
+&apos;Drafting Decision&apos;,&apos;In Review&apos;,
+&apos;QC&apos;,&apos;In Review&apos;,
+&apos;Ready to be Closed&apos;,&apos;In Review&apos;,
+&apos;Closed/Completed&apos;,&apos;Review Complete&apos;,
+&apos;Review Complete&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MDIRO Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

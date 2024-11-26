@@ -1,0 +1,23 @@
+.THIS .firstblock{
+    background-image: linear-gradient(to right, rgb(131, 111, 23), rgb(255, 221, 80));
+    height: 25px;
+}
+.THIS .secondblock{
+    background-color: rgba(31, 86, 147, 1);
+    height:80px;
+}
+.THIS .thirdblock{
+    
+    background: linear-gradient(to bottom, rgba(90, 86, 87, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    height: 40px;
+}
+.THIS .slds-box{
+    border-radius: 0!important;
+    border: 0!important;
+}
+.THIS .yellowText{
+    color :  yellow!important;
+}
+.THIS .whiteText{
+    color :  white!important;
+}

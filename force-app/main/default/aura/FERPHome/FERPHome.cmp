@@ -1,0 +1,40 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+                <h1 style="font-family: Helvetica; font-size: 26px">Welcome to the HHS-Administered Federal External Review Process website.</h1><br/>
+                
+            <p class = "smallFont">Under the Affordable Care Act, consumers have rights to appeal health insurance plan decisions to deny payment for services or coverage of treatment for some claims. Under the law, most health plans must meet basic standards for how to handle <i>internal appeals</i> and <i>external reviews</i>.<br/><br/>
+                    <p >Consumers or their authorized representatives have the right to ask for an <i>internal appeal</i>. In an internal appeal, the plan looks at their adverse benefit determination again. If the plan still denies payment or service after the internal appeal, it will issue a final determination.</p><br/>
+                    <p >An internal appeal is a review by the health plan itself. You may file an internal appeal to ask your health plan to reconsider its decision to deny your:</p><br/>
+                    <ul class="a" >
+                    <li class = "smallFont">Request for approval to get a service or treatment (pre-authorization)</li>
+                    <li class = "smallFont">Claim for all or part of payment for a service or treatment (for example, after a claim is not covered at an in-network rate).</li>
+                    <li class = "smallFont">Eligibility for health insurance coverage after a claim has been filed</li>
+                        </ul>
+                    <br/>
+                    If the health plan upholds its initial decision on appeal, consumers are entitled to request an external review. In some cases, consumers are entitled to request an external review even before they've completed their plan's internal appeals process, including when the plan's internal review process does not comply with Federal standards, or in the case of medical urgency. An external review is a review of the health plan's decision by an independent third party. This means that insurance companies no longer have the final say over many benefit decisions. An external review will either uphold the insurance company's decision or decide in favor of the consumer by overturning all or part of the health plan's decision.<br/>
+                    <br/>
+                    The external review can be for adverse benefit determinations that involve:<br/><br/>
+                    <ul class="a" >
+                    <li>Medical necessity</li>
+                    <li>Appropriateness</li>
+                    <li>Health care setting</li>
+                    <li>Level of care</li>
+                    <li>Effectiveness of a covered benefit</li>
+                    <li>Whether a treatment is experimental or investigational</li>
+                    <li>Any other matter that involves medical judgment</li>
+                    <li>Compliance with protections against surprise billing, including cost-sharing protections for certain out-of-network care</li>
+                    </ul><br/>
+                    If your health insurance is retroactively cancelled, you may also request an external review. Retroactive cancellation is sometimes called <i>rescission of coverage</i>. It means that the plan cancelled your coverage back to the beginning of your coverage.<br/><br/>
+                    In some specific limited cases, a consumer can ask for an external review without completing the plan's internal appeals process first. In those cases, the consumer can request an external review of the plan's original decision to deny a benefit or refuse payment.<br/><br/>
+                    The purpose of the external review is to find out if the health plan's decision was right. There is a <i>standard</i> external review and, for urgent cases, an <i>expedited</i> (faster than usual) external review.<br/><br/>
+                Sometimes an <i>external review</i> is called an <i>external appeal</i>. We will use the term <i>external review</i> on this website.</p>
+        </div>
+    
+        <div class="slds-card__footer"></div>
+    
+     </div>
+</aura:component>

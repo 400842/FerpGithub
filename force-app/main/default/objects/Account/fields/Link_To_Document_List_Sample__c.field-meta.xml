@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_To_Document_List_Sample__c</fullName>
+    <inlineHelpText>Enter the URL where the document list sample is stored</inlineHelpText>
+    <label>Link To Document List Sample</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Url</type>
+</CustomField>

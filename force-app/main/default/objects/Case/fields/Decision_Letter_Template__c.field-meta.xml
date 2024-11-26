@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Letter_Template__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Decision Letter Template</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Program_Review_Type__c.Program_Name__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Program_Review_Type__c.Template_Name__c</field>
+            <operation>equals</operation>
+            <value>Decision Letter, Medical Director Decision Letter, MA ACO RBPO Decision Letter, MA Infertility Decision Letter, MA Experimental Decision Letter, MA Medical Necessity Decision Letter, MA Continuation of Coverage Decision Letter</value>
+        </filterItems>
+        <filterItems>
+            <field>Program_Review_Type__c.Record_Type_Name__c</field>
+            <operation>equals</operation>
+            <value>Document Template</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Program_Review_Type__c</referenceTo>
+    <relationshipLabel>Cases (Decision Letter Template)</relationshipLabel>
+    <relationshipName>Cases1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

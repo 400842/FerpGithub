@@ -1,0 +1,57 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+	<div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Helvetica; font-size: 26px">External Reviews</h1>
+            <h2 class = "smallFont fontW400">Standard and NSA External Reviews</h2>
+            <p class = "smallFont">A person may submit a standard external review request via mail, fax, or submit an online request for an external review within four months after the date the consumer received the final internal adverse benefit determination notice.</p>
+            <br/>
+            <p class = "smallFont ">MAXIMUS must give the claimant written notice of the final external review decision as soon as possible, but no later than 45 days after it receives the request for an external review. </p>
+           <br/> <h2 class = "smallFont fontW400">Expedited External Review</h2> 
+            <p class = "smallFont">In some cases, a person may ask for an expedited (faster than usual) external review. An expedited review may be requested when:</p><br/>
+            <p class = "smallFont left15">1. The person has asked for an expedited internal appeal and wants an expedited external review at the same time, and the timeframe for an expedited internal appeal would place the person's life, health or ability to regain maximum function in danger.</p>
+            <br/><p class = "smallFont left15">OR</p>
+            <br/>
+            <p class = "smallFont left15">2. The person has completed an internal appeal with the plan and the decision was not in his or her favor, and:</p>
+            <ul class="overrideUL">  <p class = "smallFont left30" >a.The timeframe to do a standard external review (45 days) would place the person's life, health or ability to regain maximum function in danger, or<br/>
+                                     b.The decision is about admission, care availability, continued stay, or emergency health care services where the person has not been discharged from the facility.</p>
+             <li class = "smallFont left15" >MAXIMUS will give the claimant and the health plan the external review decision as quickly as medical circumstances require, but no later than within 72 hours of receiving the request.</li>
+            <li class = "smallFont left15" >MAXIMUS can give the external review decision orally, but it must be followed up by a written version of the decision within 48 hours of the oral notification.</li></ul><br/>
+            <h2 class = "smallFont fontW400">Formulary Exception Review</h2>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >Standard Reviews - MAXIMUS will give the claimant and the health plan the external review decision no later than 72 hours of receiving the request. MAXIMUS has the option to give the external review decision orally and follow it with a written decision within 48 hours.</li><br/>
+            <li class = "smallFont left15" >Expedited Reviews - MAXIMUS will give the claimant and the health plan the external review decision no later than 24 hours of receiving the request. MAXIMUS has the option to give the external review decision orally and follow it with a written decision within 48 hours.</li></ul><br/>
+        <h2 class = "smallFont fontW400">Required Information for Requesting an External Review</h2>
+            <p class = "smallFont">To request an external review, a person must provide the following information:</p><br/>
+            <ul class="overrideUL">  <li class = "smallFont left15">Name</li>
+            <li class = "smallFont left15">Address</li>
+            <li class = "smallFont left15">Phone</li>
+            <li class = "smallFont left15">Email address</li>
+            <li class = "smallFont left15">Whether the request is urgent</li>
+            <li class = "smallFont left15">Patient's signature if person filing the appeal is not the patient</li>
+            <li class = "smallFont left15">A brief description of the reason you disagree with your plan's denial decision.</li></ul>
+            <br/>
+            <!--B-08284 Added Custom Label for url difference between sandbox Owner:Sugam-->
+            <p class = "smallFont">If you are not submitting a request through the online portal, you must complete all sections of <a style="color:blue" href="{!$Label.c.Community_Start_URL+'/forms'}" >HHS Federal External Review Request Form</a> and mail or fax to MAXIMUS.</p>
+            <br/>
+            <p class = "smallFont">Also, a person may submit additional information for consideration of their external review request. For example, a person may provide:</p><br/>
+            <ul class="overrideUL">  <li class = "smallFont left15">Documents to support the claim, such as physicians' letters, reports, bills, medical records, and explanation of benefits (EOB) forms;</li>
+            <li class = "smallFont left15">Letters sent to your health insurance plan about the denied claim; and</li>
+            <li class = "smallFont left15">Letters received from the health insurance plan.</li></ul><br/>
+            <p class = "smallFont">If you would like to have another person make an external review request on your behalf, you must submit the HHS Federal External Review Process Appointment of Representative Form. Both you and your authorized representative will need to complete and sign this form. Section 1 of the form is an Appointment of Representative section that must be completed and signed by you, the Claimant. Section 2 of the form is an Acceptance of Appointment section that must be completed and signed by the representative.</p>
+            <br/>
+            <h2 class = "smallFont fontW400">Methods for Requesting an External Review with MAXIMUS:</h2>
+            <ul class="overrideUL">
+                <p class = "smallFont left15">  1. Submit Online Request, click <a href="{!$Label.c.Community_Start_URL+'/casecreatedemo'}" style="color:blue" >Request an External Review</a></p><br />
+                <p class = "smallFont left15"> 2. Mail a request directly to MAXIMUS: </p><br />
+                
+                <p class = "smallFont left30">MAXIMUS Federal Services<br />
+                                              State Appeals East<br /> 
+                                              3750 Monroe Avenue, Suite 708<br />
+                                              Pittsford, NY 14534</p><br />
+                
+                <p class = "smallFont left15"> 3. Fax a request to: 1-888-866-6190</p>
+            </ul>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<div class="slds-card">
+    	<div class="slds-grid slds-wrap">
+            <div class="slds-size--1-of-1">
+                <h1 class="slds-border_bottom slds-text-heading_medium" style="font-family: Helvetica; font-size: 26px;color:rgb(131, 111, 23)">Contact Us</h1><br/> <br/>              
+            </div><br/>
+        	<div class="slds-size--3-of-3 slds-medium-size--2-of-3">
+                <p class = "smallFont"><b>Our Mailing Address</b></p>
+                <p class = "smallFont">3750 Monroe Avenue, Suite 708, Pittsford, NY 14534</p><br/>
+                <p class = "smallFont"><b>Our toll free telephone number</b></p>
+                <p class = "smallFont">1-888-975-1080</p><br/>
+                <p class = "smallFont"> <b>Our toll free fax number</b></p>
+                <p class = "smallFont">1-888-866-6190</p>
+            </div>
+            <div class="slds-size--3-of-3 slds-medium-size--1-of-3">
+                <img src="{!$Resource.FERPContactUs}"/>
+            </div>
+        </div>	
+    </div>
+</aura:component>

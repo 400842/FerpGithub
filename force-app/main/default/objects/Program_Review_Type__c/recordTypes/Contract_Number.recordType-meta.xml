@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Number</fullName>
+    <active>true</active>
+    <label>Contract Number</label>
+    <picklistValues>
+        <picklist>Template_Name__c</picklist>
+        <values>
+            <fullName>Acknowledgement Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismissal Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA ACO RBPO Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA ACO RBPO Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA ACO RBPO Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Continuation of Coverage Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Continuation of Coverage Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Continuation of Coverage Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Experimental Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Experimental Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Experimental Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Infertility Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Infertility Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Infertility Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Medical Necessity Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Medical Necessity Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MA Medical Necessity Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notice Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Decision Letter - MD Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Decision Letter - MD Template Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Decision Letter -Standard Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Expert Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA DOH Expert Review Form - MD Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI Decision Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI Decision Letter Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RI Review Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Appeal Category</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Appeal Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Phase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Type</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

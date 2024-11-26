@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <label>Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incomplete Request</fullName>
+                <default>false</default>
+                <label>Incomplete Request</label>
+            </value>
+            <value>
+                <fullName>Internal Appeals Not Exhausted</fullName>
+                <default>false</default>
+                <label>Internal Appeals Not Exhausted</label>
+            </value>
+            <value>
+                <fullName>Plan Not Elected into FERP</fullName>
+                <default>false</default>
+                <label>Plan Not Elected into FERP</label>
+            </value>
+            <value>
+                <fullName>Untimely Request</fullName>
+                <default>false</default>
+                <label>Untimely Request</label>
+            </value>
+            <value>
+                <fullName>Non-Medical Judgment Decision</fullName>
+                <default>false</default>
+                <label>Non-Medical Judgment Decision</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

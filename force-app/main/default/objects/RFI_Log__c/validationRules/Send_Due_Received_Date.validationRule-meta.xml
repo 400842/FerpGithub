@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Due_Received_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( OR(Received_Date__c  &lt;=  Send_Date__c,Due_Date__c &lt;=  Send_Date__c)  ,true, false)</errorConditionFormula>
+    <errorMessage>Impossible date order is provided</errorMessage>
+</ValidationRule>

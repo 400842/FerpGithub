@@ -1,0 +1,26 @@
+.THIS  .slds-form-element__label{
+    color: #333;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.THIS .smallFont{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+
+}
+.THIS .left30{
+    padding-left : 30px;
+    padding-bottom : 10px;
+}
+.THIS .fontW400{
+        font-weight: 700;
+    padding-bottom : 10px;
+}
+.THIS .left15{
+    padding-left : 15px;
+}
+.THIS .leftOnly30{
+    padding-left : 30px;
+}

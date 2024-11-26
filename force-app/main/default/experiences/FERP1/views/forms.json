@@ -1,0 +1,54 @@
+{
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "d9e3e279-acea-4759-b612-cd37aa0fcfee",
+  "label" : "Forms",
+  "regions" : [ {
+    "id" : "7d414d7a-97b8-4c96-a8cb-70cc4c46b3a1",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FERPForms",
+      "id" : "413a06b5-0dcf-4fc6-8c6c-2d3b535ef35c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5c0fc3c2-8853-4fbf-9a43-6148297dfc38",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:FERPFooter",
+      "id" : "a5e422b2-1a13-4f08-9016-5506c5308f0e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b0f63531-e2a3-4b55-8bec-fdde365b2510",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Forms"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fb27bbf4-bba7-436f-be7a-06edbc16ac49",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "05b8dac3-c4d9-433e-b0ee-a2be73aa136b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "l2fAEBy1kBFQ9txx3EY48SYVfgJD8u",
+  "type" : "view",
+  "viewType" : "custom-forms"
+}

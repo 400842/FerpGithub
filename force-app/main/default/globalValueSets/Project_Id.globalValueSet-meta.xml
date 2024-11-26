@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>WA</fullName>
+        <default>false</default>
+        <label>WA</label>
+    </customValue>
+    <customValue>
+        <fullName>TX</fullName>
+        <default>false</default>
+        <label>TX</label>
+    </customValue>
+    <customValue>
+        <fullName>CO</fullName>
+        <default>false</default>
+        <label>CO</label>
+    </customValue>
+    <customValue>
+        <fullName>FP</fullName>
+        <default>false</default>
+        <label>FP</label>
+    </customValue>
+    <masterLabel>Project Id</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

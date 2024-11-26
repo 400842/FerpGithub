@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Authorized</fullName>
+    <active>false</active>
+    <description>Cannot UnAuthorized When Payment Period is populated</description>
+    <errorConditionFormula>IF( (NOT( ISBLANK( Payment_Period__c ) ) ) &amp;&amp;( Authorized__c  == false) , true, false)</errorConditionFormula>
+    <errorDisplayField>Authorized__c</errorDisplayField>
+    <errorMessage>Cannot UnAuthorized When Payment Period is populated</errorMessage>
+</ValidationRule>

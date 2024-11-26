@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Letter_Template__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Review Form Template</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Program_Review_Type__c.Program_Name__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Program_Review_Type__c.Template_Name__c</field>
+            <operation>equals</operation>
+            <value>Review Letter, MA ACO RBPO Review Form, MA Experimental Review Form, MA Infertility Review Form, MA Medical Necessity Review Form, MA Continuation of Coverage Review Form, PA DOH Expert Review Form - MD Template</value>
+        </filterItems>
+        <filterItems>
+            <field>Program_Review_Type__c.Record_Type_Name__c</field>
+            <operation>equals</operation>
+            <value>Document Template</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Program_Review_Type__c</referenceTo>
+    <relationshipLabel>Cases (Review Letter Template)</relationshipLabel>
+    <relationshipName>Cases2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,27 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+   
+	<div class="slds-card slds-border_around">
+        <div class="slds-card__header"></div>
+        <div class="slds-card__body slds-card__body_inner">
+            <h1 style="font-family: Helvetica; font-size: 22px;font-weight:500">Request a Review Online</h1>
+            <p class = "smallFont left15">Use this secure web-based portal to request external review of a Health Plan determination and/or to check the status of a request that was submitted through this portal.</p>
+            <br/>
+            <h2 class = "smallFont left15"><u>Requesting a Review Online</u></h2>
+            <br/>
+            <ul class="overrideUL">
+            <li class = "smallFont left15" >Before you submit your request, be sure to have your Health Plan ID#, information regarding the denial and any supporting documentation you believe will help your case.</li>
+            <li class = "smallFont left15" >If you would like to appoint someone to represent you OR you are requesting review for someone, be sure you have completed the Appointment of Representative Form in its entirety. You must submit this form as part of your request. Click  <a href="{!$Label.c.Community_Start_URL+'/forms'}" style="color:blue">Appointment of Representative Form</a></li>
+            <li class = "smallFont left15" >If you have questions or believe your case should be expedited, you have several options:
+            <p class = "smallFont"><u>Option 1:</u> Send an email to FERP@maximus.com</p>
+            <p class = "smallFont"><u>Option 2:</u> Call the Federal External Review Process at 1-888-975-1080</p>
+            <p class = "smallFont"><u>Option 3:</u> Select "expedited" if submitting your review request online</p>
+            </li>
+                <!--B-08284 Added Custom Label for url difference between sandbox Owner:Sugam-->
+                <li class = "smallFont left15" >For more information about the Federal External Review Process, click <a href="{!$Label.c.Community_Start_URL}" target="_self" style="color:blue">Federal External Review Process</a> .</li>
+        </ul>
+            <br/>
+            <p class = "smallFont left15">When you are ready to request a review, click <a href="{!$Label.c.Community_Start_URL+'/casecreatedemo'}" style="color:blue">Request an External Review</a> and follow the instructions on the following pages.</p>
+        </div>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "7cd7f604-bcd7-4c99-bc6d-d654e63684bc",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "Privacy__c",
+  "id" : "a3996dad-953e-4cb6-a71a-8965d4ecf839",
+  "label" : "Privacy",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-privacy",
+  "type" : "route",
+  "urlPrefix" : "privacy"
+}

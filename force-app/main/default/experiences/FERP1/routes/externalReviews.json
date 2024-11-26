@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "c098a0d6-c816-442c-9692-b522c498e66c",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "external_reviews__c",
+  "id" : "90da5643-48e2-4fc1-b8fa-58831af19230",
+  "label" : "External Reviews",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-external-reviews",
+  "type" : "route",
+  "urlPrefix" : "external-reviews"
+}

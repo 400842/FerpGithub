@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fax_Number_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( ISBLANK(  Fax__c  )),
+    NOT (REGEX( Fax__c  , &quot;\\d{10}&quot;) )
+
+)</errorConditionFormula>
+    <errorDisplayField>Fax__c</errorDisplayField>
+    <errorMessage>Letters are not allowed and Fax Number Should not Exceed 10 Digit</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "59c7b3f7-25c3-4d6b-800f-063605b419b2",
+  "appPageId" : "25a6c27e-8b79-4497-a7bf-30f26a26e41a",
+  "configurationTags" : [ ],
+  "devName" : "Eligible__c",
+  "id" : "8c174d81-0278-4f8d-a6f7-ebee877e05ef",
+  "label" : "Eligible",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-eligible",
+  "type" : "route",
+  "urlPrefix" : "eligible"
+}
